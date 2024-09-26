@@ -19,7 +19,7 @@ function Footer() {
           <div className="flex justify-center">
             <div className="flex-row  ">
               <a href="/" className="cursor-pointer outline-none border-none">
-                <img src="/braintechlogo.PNG" width={180} />
+                <img src="/braintechlogo.PNG" width={200} />
               </a>
               <p className="pb-[30px] pt-[10px] text-[#566a8d] pl-[12px]">
                 Brain Auto Tech is a leading algorithmic <br></br>software
@@ -145,7 +145,7 @@ function Footer() {
                     <a href="/auto">➠ Auto Buy & Sell signals</a>
                   </li>
                   <li className="hover:underline">
-                    <a href="/strategy">➠ Stratergy Development</a>
+                    <a href="/strategy">➠ Strategy Development</a>
                   </li>
                 </div>
               </ul>

@@ -54,7 +54,7 @@ function PopUp({ title, description, imgSrc, setIsOpen }) {
         },
       }}
       onClick={() => setIsOpen(null)}
-      className="fixed w-full h-[100dvh] top-0 left-0 z-[100] bg-[rgba(59,59,59,0.28)]
+      className="fixed w-full h-[115dvh] top-0 left-0 z-[100] bg-[rgba(59,59,59,0.28)]
      flex justify-center items-center backdrop-blur-md"
     >
       <motion.div

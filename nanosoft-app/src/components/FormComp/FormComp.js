@@ -69,9 +69,12 @@ function FormComp() {
 
       try {
         const response1 = await window.fetch(
-          "https://formlinking.brainautotech.com/pushrow",
+          "https://api-brainautotech.vercel.app/pushrow",
           {
             method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
             body: JSON.stringify(newRow),
           }
         );

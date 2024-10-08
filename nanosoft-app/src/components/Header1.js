@@ -23,7 +23,8 @@ const Header1 = () => {
         <div className="relative h-full w-full flex items-center">
           <div className="absolute flex items-center animate-scroll">
             <p className="text-lg font-bold whitespace-nowrap">
-            🚨 Important: Beware of Scammers! Only trust official communications and payment details from Brain Auto Tech Pvt Ltd.
+            ⚠️ Please make payments only to bank accounts with the name "Brain Auto Tech Pvt Ltd"—whether through barcode, UPI, or bank details. Ensure the company name is present.  
+⚠️ Important: Beware of scammers! Only trust official communications and payment details from Brain Auto Tech.
             </p>
           </div>
         </div>

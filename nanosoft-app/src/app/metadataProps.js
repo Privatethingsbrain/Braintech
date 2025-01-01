@@ -95,6 +95,10 @@ const metadataProps = {
     description: `Explore our transparent pricing for high-quality services. 
     Get the best value for your investment with clear and competitive pricing options.`,
   },
+  indicator: {
+    title: "Indicator  - BrainAutoTech",
+    description: `Get the indicator details here for any services of BrainAutoTech.`,
+  },
   payment: {
     title: "Payment  - BrainAutoTech",
     description: `Get the payment details here for any services of BrainAutoTech.`,

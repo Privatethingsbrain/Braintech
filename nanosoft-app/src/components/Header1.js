@@ -92,6 +92,9 @@ const Header1 = () => {
             <a href="/pricing" className="textdesign cursor-pointer">
               Pricing
             </a>
+            <a href="/indicator" className="textdesign cursor-pointer">
+              Indicator
+            </a>
             <a href="/payment" className="textdesign hover:cursor-pointer">
               Payment
             </a>
@@ -231,6 +234,12 @@ const Header1 = () => {
                       className="focus:outline-none focus:ring-2 !text-[#102b5c] focus:ring-inset focus:ring-gray-500 px-2"
                     >
                       Algo-Services
+                    </a>
+                    <a
+                      href="/indicator"
+                      className="focus:outline-none focus:ring-2 !text-[#102b5c] focus:ring-inset focus:ring-gray-500 px-2"
+                    >
+                      Indicator
                     </a>
                     <a
                       href="/pricing"

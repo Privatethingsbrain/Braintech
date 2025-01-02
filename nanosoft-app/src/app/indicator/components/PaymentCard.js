@@ -42,6 +42,9 @@ const payment_info = [
 const PaymentCard = () => {
   return (
     <div className="px-[15%] pb-[50px]">
+      <div className="text-center text-3xl py-4">
+        <span className={poppinsFont.className}>GET ALL INDICATORS WITH SILVER AND GOLD SUBSCRIPTIONS</span>
+      </div>
       <div className="md:flex md:justify-between md:items-start">
         {payment_info.map((eleData, index) => (
           <div

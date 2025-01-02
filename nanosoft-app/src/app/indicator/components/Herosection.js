@@ -37,7 +37,7 @@ const Herosection = () => {
         />
       </Head>
 
-      <div className="pt-[150px] pb-[500px]">
+      <div className="pt-[150px] pb-[100px]">
         <BlobComp1 />
         <div className="md:flex justify-between items-center md:px-[15%] gap-0">
           <div className="text text-[7vh] font-[999] md:block hidden">

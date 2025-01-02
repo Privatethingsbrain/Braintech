@@ -67,7 +67,7 @@ const PaymentCard = () => {
                 Choose your <br></br>Plan Today
               </p>
             </div>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-center gap-12">
               <div className={poppinsFont1.className}>
                 <p>
                   All you need is a free TradingView<br></br> account to get

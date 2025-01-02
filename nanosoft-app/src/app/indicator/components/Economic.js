@@ -54,7 +54,7 @@ const Economic = () => {
               </div>
             ))}
             <div className="flex justify-center pb-6 ">
-              <button className="border-[2px] border-[#00c2e0] text-black py-2 px-4 rounded-full transition-all duration-300 shadow-[0_0_10px_#00c2e0] flex items-center justify-center gap-1">
+              <button className="border-[2px] border-[#00c2e0] hover:bg-[#00c2e0] text-black py-2 px-4 rounded-full transition-all duration-300 shadow-[0_0_10px_#00c2e0] flex items-center justify-center gap-1">
                 <p>Explore Indicators</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +97,7 @@ const Economic = () => {
       <div className="bg-[#00c2e0] w-full h-[60px] mt-12 flex items-center justify-center">
         <div className="flex items-center justify-center gap-4">
           <div className="text-lg text-white font-semibold"> <span className={poppinsFont.className}>GET LIFETIME ACCESS</span></div>
-          <button className="border-[2px] text-sm border-[#f5511d] bg-[#f5511d] text-white py-2 px-4 rounded-full transition-all duration-300 shadow-[0_0_5px_#f5511d] flex items-center justify-center gap-1">
+          <button className="border-[2px] text-sm border-[#f5511d] bg-[#f5511d] text-white py-2 px-4 rounded-full transition-all duration-300 shadow-[0_0_5px_#f5511d] flex items-center justify-center gap-1 ">
             <span className={poppinsFont.className}>BUY NOW</span>
           </button>
         </div>

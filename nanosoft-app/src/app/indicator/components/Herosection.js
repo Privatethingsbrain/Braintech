@@ -99,7 +99,7 @@ const Herosection = () => {
         </div>
 
         <div className="flex items-center justify-center text-[2.5vh] font-normal tracking-tight">
-          <button className="border-[2px] border-[#00c2e0] text-black py-2 px-4 rounded-full transition-all duration-300 shadow-[0_0_10px_#00c2e0]">
+          <button className="border-[2px] border-[#00c2e0] text-black py-2 px-4 rounded-full transition-all duration-300 shadow-[0_0_10px_#00c2e0] hover:bg-[#00c2e0]">
             <span className={poppinsFont2.className}>GET ACCESS</span>
           </button>
         </div>

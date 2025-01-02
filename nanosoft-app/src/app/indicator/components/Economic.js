@@ -34,7 +34,7 @@ const Economic = () => {
         );
       }, []);
   return (
-    <div className="pb-[100px]">
+    <div className="pb-[50px]">
       <div className="md:flex md:items-center md:justify-center px-5">
         <div className={poppinsFont2.className}>
           <div className=" md:w-[400px] bg-[#b9eef6] border-[2px] border-[#00c2e0] text-black py-2 px-4 rounded-3xl transition-all duration-300 shadow-[0_0_10px_#00c2e0] mx-4">

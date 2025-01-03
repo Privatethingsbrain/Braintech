@@ -1,4 +1,9 @@
-import React from "react";
+"use client"
+import React, { useEffect ,useRef} from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Winning() {
   return (
@@ -64,8 +69,31 @@ function RightComp({ title, para }) {
 }
 
 function MobileComp() {
+  const mobileRef = useRef(null);
+
+  useEffect(() => {
+    const element = mobileRef.current;
+
+    gsap.fromTo(
+      element,
+      { scale: 0.8, opacity: 0 },
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: element,
+          start: "top 80%",
+          end: "bottom 60%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  }, []);
+
   return (
-    <div className="relative w-[225px] h-[425px] mt-10">
+    <div ref={mobileRef} className="relative w-[225px] h-[425px] mt-10">
       <div className="w-[225px] h-[425px] z-20">
         <div className="absolute w-[225px] h-[425px] z-30 -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
           <img
@@ -82,7 +110,7 @@ function MobileComp() {
           />
         </div>
       </div>
-      <div className="w-[225px] h-[425px] absolute  -left-28 -top-8 z-10">
+      <div className="w-[225px] h-[425px] absolute -left-28 -top-8 z-10">
         <div className="absolute w-[225px] h-[425px] z-10 -translate-x-1/2 -translate-y-1/2 left-1/2 top-1/2">
           <img
             className="h-full object-cover"

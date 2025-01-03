@@ -7,10 +7,14 @@ import PaymentCard from "./components/PaymentCard";
 import Winning from "./components/Winning";
 import Lifetime from "./components/Lifetime";
 import Script from "next/script";
+import LoadGoogleAdsScript from "@/components/LoadGoogleAdsScript";
+import LoadGoogleAdsIframe from "@/components/LoadGoogleAdsIframe";
 
 const page = () => {
   return (
     <div>
+      <LoadGoogleAdsScript />
+      <LoadGoogleAdsIframe />
       <Script src="https://checkout.razorpay.com/v1/checkout.js" />
       <Header1 />
       <Herosection />

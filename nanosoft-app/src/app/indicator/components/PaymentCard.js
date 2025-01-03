@@ -59,6 +59,7 @@ const Ticks = [
   },
 ];
 const PaymentCard = () => {
+  const formRef = useRef();
   return (
     <div className="md:px-[15%] px-[5%]">
       <Toaster position="top-right" reverseOrder={false} />
@@ -200,7 +201,7 @@ const PaymentCard = () => {
           />
         ))}
       </div>
-      <div className="py-4">
+      <div ref={formRef} className="py-4">
         <div>
           <PaymentForm />
         </div>

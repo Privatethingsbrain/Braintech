@@ -1,31 +1,39 @@
 import React from "react";
+import { Poppins } from "next/font/google";
+const poppinsFont = Poppins({ subsets: ["latin"], weight: "300" });
+const poppinsFont1 = Poppins({ subsets: ["latin"], weight: "700" });
+const poppinsFont2 = Poppins({ subsets: ["latin"], weight: "500" });
 
 function Lifetime() {
   return (
-    <div className="w-full pt-6 pb-[50px]">
-      <div className="w-full flex-row flex justify-center space-x-7">
+    <div className="px-[5%] pt-6 pb-[50px] ">
+      <div className="w-full md:flex-row md:flex justify-center space-x-7">
         <div className="flex flex-col items-start">
-          <h2 className="font-bold text-5xl text-[#00c2e0]">LIFETIME ACCESS</h2>
+          <h2 className="font-bold text-5xl text-[#00c2e0]">
+            <span className={poppinsFont1.className}>LIFETIME ACCESS</span>
+          </h2>
           <div className="flex flex-row items-center relative py-10 pl-6">
-            <ul className="list-disc text-xl space-y-4">
-              <li>All premium features</li>
-              <li>Lifetime updates</li>
-              <li>Priority customer support</li>
-              <li>Unlimited use</li>
-              <li>Pro Scalper</li>
-              <li>ProfitAlgo</li>
-              <li>Pace Pro</li>
-            </ul>
-            <div className="h-80 w-80 absolute -z-50">
+            <div className={poppinsFont2.className}>
+              <ul className="list-disc text-xl space-y-4">
+                <li>All premium features</li>
+                <li>Lifetime updates</li>
+                <li>Priority customer support</li>
+                <li>Unlimited use</li>
+                <li>Pro Scalper</li>
+                <li>ProfitAlgo</li>
+                <li>Pace Pro</li>
+              </ul>
+            </div>
+            <div className="h-80 w-72 absolute -z-50">
               <img
                 alt=""
                 src="/graphics/grow.avif"
-                className="-rotate-[28deg] object-contain h-full w-full absolute -translate-x-1/2 -translate-y-1/2 left-3/4 top-[55%] pointer-events-none"
+                className="-rotate-[28deg] object-contain  h-full w-full absolute -translate-x-1/2 -translate-y-1/2 left-3/4 top-[55%] pointer-events-none"
               />
             </div>
           </div>
         </div>
-        <div className="w-96 flex flex-col rounded-2xl overflow-hidden border-[#00c2e0] shadow-[0_0_10px_#00c2e0] bg-[#b9eef6] border-[2px]">
+        <div className="w-80 flex flex-col rounded-2xl overflow-hidden border-[#00c2e0] shadow-[0_0_10px_#00c2e0] bg-[#b9eef6] border-[2px]">
           <div className="w-full h-48 rounded-lg overflow-hidden border-[#00c2e0] border-b-[2px]">
             <img
               alt=""
@@ -34,10 +42,21 @@ function Lifetime() {
             />
           </div>
           <div className="py-7 flex flex-col items-center">
-            <h4>LIFETIME ACCESS</h4>
-            <p>$ 499</p>
-            <p>One-time payment!</p>
-            <div className="w-full bg-slate-50 rounded-lg">Purchase Now</div>
+            <h4 className={poppinsFont1.className}>LIFETIME ACCESS</h4>
+            <div className={poppinsFont1.className}>
+            <p className="text-5xl pt-2">
+              <sup>$</sup> 499
+            </p>
+            </div>
+            <div className={poppinsFont.className}>
+            <p className="text-xs">One-time payment!</p>
+            </div>
+            <button
+          className="bg-[#f5511d] py-3 px-5 rounded-3xl text-sm mt-8 text-white hover:bg-[#e04819] focus:ring-2 focus:ring-[#f5511d] focus:outline-none"
+      
+        >
+          <span className={poppinsFont2.className}>Purchase</span>
+        </button>
           </div>
         </div>
       </div>

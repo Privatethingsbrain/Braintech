@@ -92,6 +92,33 @@ const Indicators = () => {
           ))}
         </div>
       </div>
+      <div className="flex flex-col pt-20 items-center gap-5 w-full h-[500px] md:h-[1400px]">
+        <p className="md:text-6xl text-2xl "><span className={poppinsFont1.className}>Demo Video</span></p>
+        <div className="w-full h-[100%]">
+          <iframe
+            width={"100%"}
+            height={"100%"}
+            src="https://www.youtube.com/embed/WnUiATh7Ito?si=aImuhRedoSYoOIsa"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div className="w-full  h-[100%]">
+          <iframe
+            width={"100%"}
+            height={"100%"}
+            src="https://www.youtube.com/embed/eK24b8SjeRA?si=xAJvbdbApMTOalmj"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
     </div>
   );
 };

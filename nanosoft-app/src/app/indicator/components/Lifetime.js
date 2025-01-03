@@ -24,7 +24,7 @@ function Lifetime() {
                 <li>Pace Pro</li>
               </ul>
             </div>
-            <div className="h-80 w-72 absolute -z-50">
+            <div className="h-[400px] hidden md:block w-72 absolute -z-50">
               <img
                 alt=""
                 src="/graphics/grow.avif"

@@ -7,6 +7,7 @@ import PaymentCard from "./components/PaymentCard";
 import Winning from "./components/Winning";
 import Lifetime from "./components/Lifetime";
 import Script from "next/script";
+import Indicators from "./components/Indicators";
 
 const page = () => {
   return (
@@ -18,6 +19,7 @@ const page = () => {
       <Economic />
       <PaymentCard />
       <Lifetime />
+      <Indicators/>
       <Footer />
     </div>
   );

@@ -3,6 +3,7 @@ import { validateWebhookSignature } from "razorpay/dist/utils/razorpay-utils";
 import { NextResponse } from "next/server";
 import { JWT } from "google-auth-library";
 import { GoogleSpreadsheet } from "google-spreadsheet";
+import typesPayment from "../configs/typesPayment";
 
 export async function GET(request, response) {
   // Do whatever you want
@@ -47,6 +48,12 @@ export async function POST(request, response) {
         "Razorpay Order Id": razorpay_order_id,
         "Razorpay Payment Id": razorpay_payment_id,
         "Razorpay Signature": razorpay_signature,
+        Note: reqBody.note,
+        "Strategy Type": reqBody.type,
+        "Amount Paid":
+          typesPayment[reqBody.type].currency +
+          " " +
+          typesPayment[reqBody.type].amount,
       };
       await sheet.addRow(rowBody);
       console.log("Payment verification successful");

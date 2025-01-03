@@ -1,23 +1,6 @@
 import Razorpay from "razorpay";
 import { NextResponse } from "next/server";
-
-const typesPayment = {
-  hni: {
-    amount: 1,
-    currency: "INR",
-    receipt: "receipt#1",
-  },
-  bronze: {
-    amount: 2,
-    currency: "INR",
-    receipt: "receipt#1",
-  },
-  premium: {
-    amount: 3,
-    currency: "INR",
-    receipt: "receipt#1",
-  },
-};
+import typesPayment from "../configs/typesPayment";
 
 export async function GET(request, response) {
   // Do whatever you want

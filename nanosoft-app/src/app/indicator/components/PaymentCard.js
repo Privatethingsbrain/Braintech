@@ -269,9 +269,10 @@ function PaymentForm() {
       toast.loading("Your request is sending, please wait!!", {
         duration: 4000,
       });
+      const type1 = selectedStrategy.value;
       const newOrder = {
         notes: { note: note },
-        type: selectedStrategy.value,
+        type: type1,
       };
 
       try {
@@ -282,20 +283,20 @@ function PaymentForm() {
           },
           body: JSON.stringify(newOrder),
         });
-        const result = await response1.json();
-        console.log(result);
+        const order = await response1.json();
+        console.log(order);
         const options = {
-          key: "<API KEY>", // Replace with your Razorpay key_id
+          key: "rzp_live_5IoKyxqlRPFLHm",
           amount: order.amount,
           currency: order.currency,
           name: "Brain Auto Tech",
-          description: "Test Transaction",
-          order_id: order.id, // This is the order_id created in the backend
-          callback_url: "http://localhost:3000/payment-success", // Your success URL
+          description: "Strategy Transaction",
+          order_id: order.id,
+          callback_url: "http://localhost:3000/thankyou",
           prefill: {
-            name: "Your Name",
-            email: "your.email@example.com",
-            contact: "9999999999",
+            name: yourName,
+            email: email,
+            contact: mobileNumber,
           },
           theme: {
             color: "#F37254",
@@ -311,20 +312,30 @@ function PaymentForm() {
                 razorpay_order_id: response.razorpay_order_id,
                 razorpay_payment_id: response.razorpay_payment_id,
                 razorpay_signature: response.razorpay_signature,
-                name: "Manoja D",
-                email: "manojadkc2004@gmail.com",
-                phone: "9902798895",
+                name: yourName,
+                email: email,
+                phone: mobileNumber,
+                note: note,
+                type: type1,
               }),
             })
               .then((res) => res.json())
               .then((data) => {
                 console.log(data);
                 if (data.status === "ok") {
+                  toast.success(
+                    `Thank you for purchasing ${selectedStrategy.label} strategy, we'll be in touch with you shortly.`,
+                    {
+                      duration: 4000,
+                    }
+                  );
                   setTimeout(() => {
-                    window.location.href = "/payment-success";
+                    thankYouPageRedirect.current.click();
                   }, 5000);
                 } else {
-                  alert("Payment verification failed");
+                  toast.error("Internal Server Error, 404!!", {
+                    duration: 4000,
+                  });
                 }
               })
               .catch((error) => {
@@ -336,21 +347,6 @@ function PaymentForm() {
 
         const rzp = new Razorpay(options);
         rzp.open();
-        // if (result.message === "success") {
-        //   toast.success(
-        //     "We appreciate you providing your information. Rest assured, we'll be in touch with you shortly.",
-        //     {
-        //       duration: 4000,
-        //     }
-        //   );
-        //   setTimeout(() => {
-        //     thankYouPageRedirect.current.click();
-        //   }, 500);
-        // } else {
-        //   toast.error("Internal Server Error, 404!!", {
-        //     duration: 4000,
-        //   });
-        // }
       } catch (error) {
         console.log(error);
         toast.error("Internal Server Error, 404!!", {

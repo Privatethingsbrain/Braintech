@@ -35,22 +35,22 @@ const Indicators = () => {
   return (
     <div className="px-[15%] py-[50px]">
       <div className={poppinsFont1.className}>
-        <p className="text-6xl text-black text-center">
+        <p className="md:text-6xl text-4xl text-black text-center">
           Our <span className="text-[#00c2e0] ">Indicators!</span>
         </p>
       </div>
       <div className="pt-[50px]">
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="md:flex md:flex-wrap md:justify-center md:gap-4">
           {Indicators_Data.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center w-[calc(50%-1rem)] pt-5"
+              className="flex flex-col items-center md:w-[calc(50%-1rem)] pt-5"
             >
               <p className={poppinsFont.className}><span className="">{item.name}</span></p>
               <img
                 src={item.ImgSrc}
                 alt={item.name}
-                className="mt-2 cursor-pointer hover:scale-105 w-[400px] h-[250px] mx-auto border-[2px] border-[#00c2e0] text-black   transition-all duration-300 shadow-[0_0_10px_#00c2e0]"
+                className="mt-2 cursor-pointer hover:scale-105 md:w-[400px] md:h-[250px] w-[400px] h-[200px] mx-auto border-[2px] border-[#00c2e0] text-black   transition-all duration-300 shadow-[0_0_10px_#00c2e0]"
               />
             </div>
           ))}

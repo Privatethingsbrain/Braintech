@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Economic from "./components/Economic";
 import PaymentCard from "./components/PaymentCard";
 import Winning from "./components/Winning";
+import Lifetime from "./components/Lifetime";
 
 const page = () => {
   return (
@@ -14,6 +15,7 @@ const page = () => {
       <Winning />
       <Economic />
       <PaymentCard />
+      <Lifetime />
       <Footer />
     </div>
   );

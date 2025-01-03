@@ -57,7 +57,7 @@ const Ticks = [
 ];
 const PaymentCard = () => {
   return (
-    <div className="md:px-[15%] px-[5%] pb-[50px]">
+    <div className="md:px-[15%] px-[5%]">
         <BlobComp2/>
       <div className="md:flex md:items-start md:justify-center py-7">
         <div className="md:w-[50%]">

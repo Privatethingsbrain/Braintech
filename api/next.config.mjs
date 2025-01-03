@@ -40,7 +40,6 @@ const nextConfig = {
       "\n"
     ),
   },
-  output: "standalone",
 };
 
 export default nextConfig;

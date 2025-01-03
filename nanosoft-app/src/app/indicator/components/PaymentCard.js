@@ -14,12 +14,14 @@ const poppinsFont2 = Poppins({ subsets: ["latin"], weight: "500" });
 const payment_info = [
   {
     plan: "Bronze",
+    value: "bronze",
     price: 99,
     time: "Every month",
     features: ["Buy and Sell", "Signal Alert", "Customizable", "24/7 Support"],
   },
   {
     plan: "Premium",
+    value: "premium",
     price: 199,
     time: "Every 6 months",
     features: [
@@ -32,6 +34,7 @@ const payment_info = [
   },
   {
     plan: "HNI",
+    value: "hni",
     price: 299,
     time: "Every Year",
     features: [
@@ -60,6 +63,7 @@ const Ticks = [
 ];
 const PaymentCard = () => {
   const formRef = useRef();
+  const [selectedStrategy, setSelectedStrategy] = useState(null);
   return (
     <div className="md:px-[15%] px-[5%]">
       <Toaster position="top-right" reverseOrder={false} />
@@ -196,14 +200,24 @@ const PaymentCard = () => {
             key={index}
             {...eleData}
             handleClick={() => {
-              console.log(eleData);
+              if (formRef.current) {
+                formRef.current.scrollIntoView();
+                const newOption = {
+                  value: eleData.value,
+                  label: eleData.plan,
+                };
+                setSelectedStrategy(newOption);
+              }
             }}
           />
         ))}
       </div>
       <div ref={formRef} className="py-4">
         <div>
-          <PaymentForm />
+          <PaymentForm
+            selectedStrategy={selectedStrategy}
+            setSelectedStrategy={setSelectedStrategy}
+          />
         </div>
       </div>
       <div className="text-center text-lg text-gray-600 py-4">
@@ -230,19 +244,25 @@ const PaymentCard = () => {
   );
 };
 
-function PaymentForm() {
+function PaymentForm({ selectedStrategy, setSelectedStrategy }) {
   const [yourName, setYourName] = useState("");
   const [email, setEmail] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
   const [note, setNote] = useState("");
-  const thankYouPageRedirect = useRef(null);
   const isLoading = useRef(false);
   const options = [
     { value: "bronze", label: "Bronze" },
     { value: "premium", label: "Premium" },
     { value: "hni", label: "HNI" },
   ];
-  const [selectedStrategy, setSelectedStrategy] = useState(options[1]);
+  function openNewPage(link) {
+    if (window) {
+      const isOpen = window.open(link);
+      if (isOpen === null) {
+        window.location.href = link;
+      }
+    }
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -267,6 +287,13 @@ function PaymentForm() {
         return;
       }
 
+      if (!selectedStrategy) {
+        toast.error("Please select a strategy", {
+          duration: 4000,
+        });
+        isLoading.current = false;
+        return;
+      }
       toast.loading("Your request is sending, please wait!!", {
         duration: 4000,
       });
@@ -285,7 +312,7 @@ function PaymentForm() {
           body: JSON.stringify(newOrder),
         });
         const order = await response1.json();
-        console.log(order);
+        // console.log(order);
         const options = {
           key: "rzp_live_5IoKyxqlRPFLHm",
           amount: order.amount,
@@ -293,7 +320,6 @@ function PaymentForm() {
           name: "Brain Auto Tech",
           description: "Strategy Transaction",
           order_id: order.id,
-          callback_url: "http://localhost:3000/thankyou",
           prefill: {
             name: yourName,
             email: email,
@@ -302,47 +328,65 @@ function PaymentForm() {
           theme: {
             color: "#F37254",
           },
-          handler: function (response) {
-            console.log(response);
-            fetch("http://localhost:5000/verify-payment", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                razorpay_order_id: response.razorpay_order_id,
-                razorpay_payment_id: response.razorpay_payment_id,
-                razorpay_signature: response.razorpay_signature,
-                name: yourName,
-                email: email,
-                phone: mobileNumber,
-                note: note,
-                type: type1,
-              }),
-            })
-              .then((res) => res.json())
-              .then((data) => {
-                console.log(data);
-                if (data.status === "ok") {
-                  toast.success(
-                    `Thank you for purchasing ${selectedStrategy.label} strategy, we'll be in touch with you shortly.`,
-                    {
-                      duration: 4000,
-                    }
-                  );
-                  setTimeout(() => {
-                    thankYouPageRedirect.current.click();
-                  }, 5000);
-                } else {
-                  toast.error("Internal Server Error, 404!!", {
-                    duration: 4000,
-                  });
-                }
-              })
-              .catch((error) => {
-                console.error("Error:", error);
-                alert("Error verifying payment");
+          handler: async function (response) {
+            try {
+              toast.loading(`Verifying your payment!`, {
+                duration: 4000,
               });
+              // console.log(response);
+              const res2 = await fetch("http://localhost:5000/verify-payment", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  razorpay_order_id: response.razorpay_order_id,
+                  razorpay_payment_id: response.razorpay_payment_id,
+                  razorpay_signature: response.razorpay_signature,
+                  name: yourName,
+                  email: email,
+                  phone: mobileNumber,
+                  note: note,
+                  type: type1,
+                }),
+              });
+              const resOut2 = await res2.json();
+
+              console.log(resOut2);
+              if (resOut2.status === "ok") {
+                toast.success(
+                  `Thank you for purchasing ${selectedStrategy.label} strategy, we'll be in touch with you shortly.`,
+                  {
+                    duration: 4000,
+                  }
+                );
+                const hrefLink = `/indicator/success?name=${encodeURIComponent(
+                  yourName
+                )}&email=${encodeURIComponent(
+                  email
+                )}&mobile=${encodeURIComponent(
+                  mobileNumber
+                )}&type=${encodeURIComponent(
+                  type1
+                )}&rzorderid=${encodeURIComponent(
+                  response.razorpay_order_id
+                )}&rzpaymentid=${encodeURIComponent(
+                  response.razorpay_payment_id
+                )}&rzsign=${encodeURIComponent(
+                  response.razorpay_signature
+                )}&note=${encodeURIComponent(note)}`.replace("\n", "");
+                openNewPage(hrefLink);
+              } else {
+                toast.error("Internal Server Error, 404!!", {
+                  duration: 4000,
+                });
+              }
+            } catch (error) {
+              console.error("Error:", error);
+              toast.error("Error verifying payment!!", {
+                duration: 4000,
+              });
+            }
           },
         };
 
@@ -366,9 +410,6 @@ function PaymentForm() {
   };
   return (
     <>
-      <a className="hidden" href="/thankyou" ref={thankYouPageRedirect}>
-        thankyou page redirect hidden
-      </a>
       <div className="w-full mx-auto p-8 bg-slate-50 rounded-lg relative border-[12px] border-white shadow-2xl ">
         <div className="flex justify-center mb-[20px]">
           <img src="/braintechlogo.PNG" width={150} />
@@ -376,6 +417,15 @@ function PaymentForm() {
         <h2 className="text-2xl text-center font-bold mb-7 text-[#1f3a68]">
           Fill the form for payment
         </h2>
+        {/* <div
+          onClick={() =>
+            openNewPage(
+              `/indicator/success?name=Manoja%20D&email=manojad2004%40gmail.com&mobile=%2B919902798895&type=bronze&rzorderid=order_Pf5X3BhW3Gbk1Q&rzpaymentid=pay_Pf5XKdgeDSdpIj&rzsign=a4a188d09e8bfee2e051650feb48c3daf6655e9fec7f25c39af69e5aa63aae95&note=Hi`
+            )
+          }
+        >
+          Test
+        </div> */}
         <form className="">
           <div className="flex flex-row flex-wrap gap-x-4">
             <div className="mb-4 lg:w-56">

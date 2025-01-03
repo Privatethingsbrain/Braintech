@@ -18,7 +18,7 @@ function Wrapper({
     if (mainRef.current && downloadRef.current) {
       html2canvas(mainRef.current).then((canvas) => {
         const dataString = canvas.toDataURL();
-        console.log(dataString);
+        // console.log(dataString);
         downloadRef.current.href = dataString;
         downloadRef.current.click();
       });

@@ -1,7 +1,10 @@
 "use client";
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Poppins } from "next/font/google";
 import BlobComp1 from "./Blobcomp1";
+import Select from "react-select";
+import toast from "react-hot-toast";
+import { Toaster } from "react-hot-toast";
 import BlobComp2 from "./Blobcomp2";
 
 const poppinsFont = Poppins({ subsets: ["latin"], weight: "300" });
@@ -58,7 +61,8 @@ const Ticks = [
 const PaymentCard = () => {
   return (
     <div className="md:px-[15%] px-[5%]">
-        <BlobComp2/>
+      <Toaster position="top-right" reverseOrder={false} />
+      <BlobComp2 />
       <div className="md:flex md:items-start md:justify-center py-7">
         <div className="md:w-[50%]">
           <div>
@@ -187,58 +191,19 @@ const PaymentCard = () => {
       </div>
       <div className="md:flex md:justify-between md:items-start">
         {payment_info.map((eleData, index) => (
-          <div
+          <PayCard
             key={index}
-            className=" md:w-[300px] bg-[#b9eef6] h-[420px] border-[2px] border-[#00c2e0] text-black pb-2  rounded-[1.7rem] transition-all duration-300 shadow-[0_0_10px_#00c2e0] mx-4 mt-7"
-          >
-            <div className="h-[50%] flex flex-col justify-center items-center bg-[#00c2e0] rounded-t-3xl">
-              <p className="text-2xl font-semibold">
-                <span className={poppinsFont2.className}>{eleData.plan}</span>
-              </p>
-              <p className="text-3xl font-semibold mt-3">
-                <span className={poppinsFont1.className}>${eleData.price}</span>
-              </p>
-              <p className="text-xs">
-                <span className={poppinsFont.className}>{eleData.time}</span>
-              </p>
-              <button
-                className="bg-[#f5511d] py-3 px-5 rounded-3xl text-sm mt-8 text-white hover:bg-[#e04819] focus:ring-2 focus:ring-[#f5511d] focus:outline-none"
-                onClick={() => {
-                  console.log(`${eleData.price}`);
-                }}
-              >
-                <span className={poppinsFont2.className}>Purchase</span>
-              </button>
-            </div>
-
-            <hr className="border-t-2 border-[#00c2e0] transition-all duration-300 shadow-[0_0_10px_#00c2e0]"></hr>
-            <div className={poppinsFont2.className}>
-              <ul className="mt-4 flex items-start flex-col gap-2 text-start justify-center px-[25%]">
-                {eleData.features.map((feature, index) => (
-                  <li
-                    key={index}
-                    className="text-[#566a8d] flex items-center justify-between mt-[2px] gap-2"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="w-5 h-5 text-green-400  flex-shrink-0"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-
-                    <p className="leading-none">{feature}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+            {...eleData}
+            handleClick={() => {
+              console.log(eleData);
+            }}
+          />
         ))}
+      </div>
+      <div className="py-4">
+        <div>
+          <PaymentForm />
+        </div>
       </div>
       <div className="text-center text-lg text-gray-600 py-4">
         <span className={poppinsFont.className}>Cancel anytime.</span>
@@ -263,5 +228,265 @@ const PaymentCard = () => {
     </div>
   );
 };
+
+function PaymentForm() {
+  const [yourName, setYourName] = useState("");
+  const [email, setEmail] = useState("");
+  const [mobileNumber, setMobileNumber] = useState("");
+  const [note, setNote] = useState("");
+  const thankYouPageRedirect = useRef(null);
+  const isLoading = useRef(false);
+  const options = [
+    { value: "bronze", label: "Bronze" },
+    { value: "premium", label: "Premium" },
+    { value: "hni", label: "HNI" },
+  ];
+  const [selectedStrategy, setSelectedStrategy] = useState(null);
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (isLoading.current === false) {
+      isLoading.current = true;
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        toast.error("Please enter a valid email address.", {
+          duration: 4000,
+        });
+        isLoading.current = false;
+        return;
+      }
+
+      const mobileRegex = /^\+?\d{2}?\s?\d{6,10}$/;
+
+      if (!mobileRegex.test(mobileNumber)) {
+        toast.error("Please enter a valid mobile number.", {
+          duration: 4000,
+        });
+        isLoading.current = false;
+        return;
+      }
+
+      toast.loading("Your request is sending, please wait!!", {
+        duration: 4000,
+      });
+      const newRow = {
+        Name: yourName,
+        Mobile: mobileNumber,
+        Email: email,
+        Investment: investment,
+      };
+
+      // try {
+      //   const response1 = await window.fetch(
+      //     "https://api-brainautotech.vercel.app/pushrow",
+      //     {
+      //       method: "POST",
+      //       headers: {
+      //         "Content-Type": "application/json",
+      //       },
+      //       body: JSON.stringify(newRow),
+      //     }
+      //   );
+      //   const result = await response1.json();
+      //   console.log(result);
+      //   if (result.message === "success") {
+      //     toast.success(
+      //       "We appreciate you providing your information. Rest assured, we'll be in touch with you shortly.",
+      //       {
+      //         duration: 4000,
+      //       }
+      //     );
+      //     setTimeout(() => {
+      //       thankYouPageRedirect.current.click();
+      //     }, 500);
+      //   } else {
+      //     toast.error("Internal Server Error, 404!!", {
+      //       duration: 4000,
+      //     });
+      //   }
+      // } catch (error) {
+      //   console.log(error);
+      //   toast.error("Internal Server Error, 404!!", {
+      //     duration: 4000,
+      //   });
+      // }
+      isLoading.current = false;
+    } else {
+      toast.loading(
+        "Your Message is being sent!! Please wait until you can send the next one!",
+        {
+          duration: 4000,
+        }
+      );
+    }
+  };
+  return (
+    <>
+      <a className="hidden" href="/thankyou" ref={thankYouPageRedirect}>
+        thankyou page redirect hidden
+      </a>
+      <div className="w-full mx-auto p-8 bg-slate-50 rounded-lg relative border-[12px] border-white shadow-2xl ">
+        <div className="flex justify-center mb-[20px]">
+          <img src="/braintechlogo.PNG" width={150} />
+        </div>
+        <h2 className="text-2xl text-center font-bold mb-7 text-[#1f3a68]">
+          Fill the form for payment
+        </h2>
+        <form className="">
+          <div className="flex flex-row flex-wrap gap-x-4">
+            <div className="mb-4">
+              <label
+                className="block text-sm font-semibold mb-2 text-[#1f3a68]"
+                htmlFor="yourName"
+              >
+                Name
+              </label>
+              <input
+                name="yourName"
+                id="yourName"
+                placeholder="Your Name"
+                className="w-full px-3 py-3 border rounded-lg  text-sm"
+                required
+                value={yourName}
+                onChange={(e) => setYourName(e.target.value)}
+                type="text"
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                className="block text-[#1f3a68] text-sm font-semibold mb-2"
+                htmlFor="Email"
+              >
+                Email
+              </label>
+              <input
+                id="Email"
+                name="Email"
+                value={email}
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="yourname@example.com"
+                className="w-full px-3 py-3 border rounded-lg   text-sm"
+                required
+                type="email"
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                className="block text-[#1f3a68] text-sm font-semibold mb-2"
+                htmlFor="Mobile"
+              >
+                Mobile
+              </label>
+              <input
+                value={mobileNumber}
+                onChange={(e) => setMobileNumber(e.target.value)}
+                name="Mobile"
+                id="Mobile"
+                placeholder="+91 123456789"
+                className="w-full px-3 py-3 border rounded-lg  text-sm"
+                required
+                type="text"
+              />
+            </div>
+            <div className="mb-4">
+              <label
+                htmlFor="note"
+                className="block text-[#1f3a68] text-sm font-semibold mb-2"
+              >
+                {"Note (Optional)"}
+              </label>
+              <textarea
+                name="note"
+                id="note"
+                value={note}
+                onChange={(e) => setNote(e.target.value)}
+                rows="4"
+                placeholder="Note"
+                className="w-full px-3 py-3 border rounded-lg  text-sm"
+                type="text"
+              />
+            </div>
+            <div className="mb-8">
+              <label className="block text-sm font-semibold mb-4 text-[#1f3a68]">
+                Strategy
+              </label>
+              <Select
+                options={options}
+                defaultValue={selectedStrategy}
+                value={selectedStrategy}
+                onChange={setSelectedStrategy}
+              />
+            </div>
+          </div>
+
+          <div className="flex justify-center">
+            <input
+              type="submit"
+              onClick={(e) => handleSubmit(e)}
+              className="bg-[#4f55c1] cursor-pointer text-white font-semibold px-4 py-2 rounded-lg w-full text-sm"
+            />
+          </div>
+          <p className="text-[12px] font-medium pt-2 text-[#1f3a68]">
+            {`Your payment will be stores in the database for safety purpose. Contact us for more details.`}
+          </p>
+        </form>
+      </div>
+    </>
+  );
+}
+
+function PayCard({ plan, price, time, features, handleClick }) {
+  return (
+    <div className=" md:w-[300px] bg-[#b9eef6] h-[420px] border-[2px] border-[#00c2e0] text-black pb-2  rounded-[1.7rem] transition-all duration-300 shadow-[0_0_10px_#00c2e0] mx-4 mt-7">
+      <div className="h-[50%] flex flex-col justify-center items-center bg-[#00c2e0] rounded-t-3xl">
+        <p className="text-2xl font-semibold">
+          <span className={poppinsFont2.className}>{plan}</span>
+        </p>
+        <p className="text-3xl font-semibold mt-3">
+          <span className={poppinsFont1.className}>${price}</span>
+        </p>
+        <p className="text-xs">
+          <span className={poppinsFont.className}>{time}</span>
+        </p>
+        <button
+          className="bg-[#f5511d] py-3 px-5 rounded-3xl text-sm mt-8 text-white hover:bg-[#e04819] focus:ring-2 focus:ring-[#f5511d] focus:outline-none"
+          onClick={handleClick}
+        >
+          <span className={poppinsFont2.className}>Purchase</span>
+        </button>
+      </div>
+
+      <hr className="border-t-2 border-[#00c2e0] transition-all duration-300 shadow-[0_0_10px_#00c2e0]"></hr>
+      <div className={poppinsFont2.className}>
+        <ul className="mt-4 flex items-start flex-col gap-2 text-start justify-center px-[25%]">
+          {features.map((feature, index) => (
+            <li
+              key={index}
+              className="text-[#566a8d] flex items-center justify-between mt-[2px] gap-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="w-5 h-5 text-green-400  flex-shrink-0"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm13.36-1.814a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z"
+                  clipRule="evenodd"
+                />
+              </svg>
+
+              <p className="leading-none">{feature}</p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}
 
 export default PaymentCard;

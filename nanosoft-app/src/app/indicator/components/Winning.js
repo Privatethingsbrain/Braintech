@@ -13,13 +13,13 @@ function Winning() {
           <span className="text-red-500">SELL</span> signals, catapulting your
           trading success!
         </p>
-        <div className="flex flex-row justify-center space-x-4 ">
-          <div className="w-[500px] flex justify-end">
-            <div className="p-2">
+        <div className="flex flex-col lg:flex-row justify-center lg:space-x-4 ">
+          <div className="w-full lg:w-[500px] flex flex-row justify-end">
+            <div className="lg:p-2 scale-75 lg:scale-100">
               <MobileComp />
             </div>
           </div>
-          <div className="py-10 flex flex-col w-[700px] justify-between">
+          <div className="py-10 flex flex-col space-y-3 w-full lg:w-[700px] justify-between px-5">
             <RightComp
               title={"Maximize ProfitPro in every asset and timeframe"}
               para={`Conquer the world of cryptocurrency, stocks, and forex in any timeframe on TradingView.`}
@@ -42,18 +42,20 @@ function Winning() {
 function RightComp({ title, para }) {
   return (
     <div className="flex flex-col space-y-2">
-      <div className="flex space-x-3">
-        <div>
-          <img
-            className="h-7 w-7"
-            src="https://img.icons8.com/office/80/checked--v1.png"
-            alt="checked--v1"
-          />
+      <div className="flex space-x-6 items-center">
+        <div className="h-full">
+          <div className="h-7 w-7">
+            <img
+              className="h-full w-7"
+              src="https://img.icons8.com/office/80/checked--v1.png"
+              alt="checked--v1"
+            />
+          </div>
         </div>
-        <h4 className="font-bold text-2xl">{title}</h4>
+        <h4 className="font-bold text-base lg:text-2xl text-left">{title}</h4>
       </div>
       <div className="">
-        <ul className="list-disc text-left pl-24">
+        <ul className="list-disc text-left pl-[70px] lg:pl-24">
           <li>{para}</li>
         </ul>
       </div>
@@ -61,7 +63,7 @@ function RightComp({ title, para }) {
   );
 }
 
-function MobileComp({ phoneImgSrc = "" }) {
+function MobileComp() {
   return (
     <div className="relative w-[225px] h-[425px] mt-10">
       <div className="w-[225px] h-[425px] z-20">
@@ -72,10 +74,10 @@ function MobileComp({ phoneImgSrc = "" }) {
             alt=""
           />
         </div>
-        <div className="absolute w-[200px] h-[405px] z-20 -translate-x-1/2 -translate-y-[50%] left-1/2 top-1/2">
+        <div className="absolute w-[200px] h-[410px] z-20 -translate-x-1/2 -translate-y-[50%] left-1/2 top-1/2">
           <img
             className=" h-full w-full object-cover rounded-[35px]"
-            src="/graphics/ss1.jpg"
+            src="/graphics/ss2.jpg"
             alt=""
           />
         </div>
@@ -88,10 +90,10 @@ function MobileComp({ phoneImgSrc = "" }) {
             alt=""
           />
         </div>
-        <div className="absolute w-[200px] h-[405px] -translate-x-1/2 -translate-y-[50%] left-1/2 top-1/2">
+        <div className="absolute w-[200px] h-[410px] -translate-x-1/2 -translate-y-[50%] left-1/2 top-1/2">
           <img
             className=" h-full w-full object-cover rounded-[35px]"
-            src="/graphics/ss1.jpg"
+            src="/graphics/ss2.jpg"
             alt=""
           />
         </div>

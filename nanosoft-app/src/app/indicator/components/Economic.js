@@ -7,7 +7,6 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 const poppinsFont = Poppins({ subsets: ["latin"], weight: "600" });
 const poppinsFont1 = Poppins({ subsets: ["latin"], weight: "700" });
 const poppinsFont2 = Poppins({ subsets: ["latin"], weight: "500" });

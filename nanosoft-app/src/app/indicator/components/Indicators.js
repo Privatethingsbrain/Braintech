@@ -1,5 +1,6 @@
 import React from "react";
 import { Poppins } from "next/font/google";
+import BlobComp3 from "./Blobcomp3";
 const poppinsFont = Poppins({ subsets: ["latin"], weight: "600" });
 const poppinsFont1 = Poppins({ subsets: ["latin"], weight: "700" });
 const poppinsFont2 = Poppins({ subsets: ["latin"], weight: "500" });
@@ -34,6 +35,7 @@ const Indicators_Data = [
 const Indicators = () => {
   return (
     <div className="px-[15%] py-[50px]">
+        <BlobComp3/>
       <div className={poppinsFont1.className}>
         <p className="md:text-6xl text-4xl text-black text-center">
           Our <span className="text-[#00c2e0] ">Indicators!</span>

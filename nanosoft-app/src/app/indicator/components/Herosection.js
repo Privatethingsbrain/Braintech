@@ -86,7 +86,7 @@ const Herosection = () => {
               </div>
               <div className="absolute top-2 left-14 md:hidden">
                 <img
-                  src="https://static.wixstatic.com/media/ad6c04_a67e09db052847cba2d6b35b89f6d17b~mv2.png/v1/crop/x_22,y_0,w_886,h_558/fill/w_195,h_123,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/newbg2.png"
+                  src="https://plus.unsplash.com/premium_photo-1682310075673-b408eb1ca6fd?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dHJhZGluZ3xlbnwwfHwwfHx8MA%3D%3D"
                   alt="Background graphic laptop"
                   className="object-cover"
                   width="275"

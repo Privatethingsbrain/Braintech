@@ -1,5 +1,5 @@
-"use client"
-import React, { useEffect ,useRef} from "react";
+"use client";
+import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -45,6 +45,27 @@ function Winning() {
 }
 
 function RightComp({ title, para }) {
+  const paraRef = useRef(null);
+
+  useEffect(() => {
+    const element = paraRef.current;
+    gsap.fromTo(
+      element,
+      { x: -50, opacity: 0 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: element,
+          start: "top 80%",
+          end: "bottom 60%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  }, []);
   return (
     <div className="flex flex-col space-y-2">
       <div className="flex space-x-6 items-center">
@@ -61,7 +82,7 @@ function RightComp({ title, para }) {
       </div>
       <div className="">
         <ul className="list-disc text-left pl-[70px] lg:pl-24">
-          <li>{para}</li>
+          <li ref={paraRef}>{para}</li>
         </ul>
       </div>
     </div>

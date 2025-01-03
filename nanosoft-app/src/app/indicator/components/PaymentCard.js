@@ -241,7 +241,10 @@ function PaymentForm() {
     { value: "premium", label: "Premium" },
     { value: "hni", label: "HNI" },
   ];
-  const [selectedStrategy, setSelectedStrategy] = useState(null);
+  const [selectedStrategy, setSelectedStrategy] = useState({
+    value: "premium",
+    label: "Premium",
+  });
 
 
   const handleSubmit = async (e) => {
@@ -315,7 +318,7 @@ function PaymentForm() {
       isLoading.current = false;
     } else {
       toast.loading(
-        "Your Message is being sent!! Please wait until you can send the next one!",
+        "Your Payment is being process!! Please wait until you can submit the next one!",
         {
           duration: 4000,
         }
@@ -336,7 +339,7 @@ function PaymentForm() {
         </h2>
         <form className="">
           <div className="flex flex-row flex-wrap gap-x-4">
-            <div className="mb-4">
+            <div className="mb-4 lg:w-56">
               <label
                 className="block text-sm font-semibold mb-2 text-[#1f3a68]"
                 htmlFor="yourName"
@@ -354,7 +357,7 @@ function PaymentForm() {
                 type="text"
               />
             </div>
-            <div className="mb-4">
+            <div className="mb-4 lg:w-56">
               <label
                 className="block text-[#1f3a68] text-sm font-semibold mb-2"
                 htmlFor="Email"
@@ -373,7 +376,7 @@ function PaymentForm() {
                 type="email"
               />
             </div>
-            <div className="mb-4">
+            <div className="mb-4 lg:w-56">
               <label
                 className="block text-[#1f3a68] text-sm font-semibold mb-2"
                 htmlFor="Mobile"
@@ -391,7 +394,7 @@ function PaymentForm() {
                 type="text"
               />
             </div>
-            <div className="mb-4">
+            <div className="mb-4 lg:w-56">
               <label
                 htmlFor="note"
                 className="block text-[#1f3a68] text-sm font-semibold mb-2"
@@ -409,11 +412,12 @@ function PaymentForm() {
                 type="text"
               />
             </div>
-            <div className="mb-8">
+            <div className="mb-4 lg:w-56">
               <label className="block text-sm font-semibold mb-4 text-[#1f3a68]">
                 Strategy
               </label>
               <Select
+                className="w-full  rounded-lg  text-sm"
                 options={options}
                 defaultValue={selectedStrategy}
                 value={selectedStrategy}
@@ -426,6 +430,7 @@ function PaymentForm() {
             <input
               type="submit"
               onClick={(e) => handleSubmit(e)}
+              value="Purchase Now 🚀"
               className="bg-[#4f55c1] cursor-pointer text-white font-semibold px-4 py-2 rounded-lg w-full text-sm"
             />
           </div>

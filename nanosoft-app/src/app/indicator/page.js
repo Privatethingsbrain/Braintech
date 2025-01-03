@@ -6,10 +6,12 @@ import Economic from "./components/Economic";
 import PaymentCard from "./components/PaymentCard";
 import Winning from "./components/Winning";
 import Lifetime from "./components/Lifetime";
+import Script from "next/script";
 
 const page = () => {
   return (
     <div>
+      <Script src="https://checkout.razorpay.com/v1/checkout.js" />
       <Header1 />
       <Herosection />
       <Winning />

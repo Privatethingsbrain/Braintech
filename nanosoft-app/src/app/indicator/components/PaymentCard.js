@@ -241,17 +241,12 @@ function PaymentForm() {
     { value: "premium", label: "Premium" },
     { value: "hni", label: "HNI" },
   ];
-  const [selectedStrategy, setSelectedStrategy] = useState({
-    value: "premium",
-    label: "Premium",
-  });
-
+  const [selectedStrategy, setSelectedStrategy] = useState(options[1]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (isLoading.current === false) {
       isLoading.current = true;
-
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       if (!emailRegex.test(email)) {
         toast.error("Please enter a valid email address.", {
@@ -274,47 +269,94 @@ function PaymentForm() {
       toast.loading("Your request is sending, please wait!!", {
         duration: 4000,
       });
-      const newRow = {
-        Name: yourName,
-        Mobile: mobileNumber,
-        Email: email,
-        Investment: investment,
+      const newOrder = {
+        notes: { note: note },
+        type: selectedStrategy.value,
       };
 
-      // try {
-      //   const response1 = await window.fetch(
-      //     "https://api-brainautotech.vercel.app/pushrow",
-      //     {
-      //       method: "POST",
-      //       headers: {
-      //         "Content-Type": "application/json",
-      //       },
-      //       body: JSON.stringify(newRow),
-      //     }
-      //   );
-      //   const result = await response1.json();
-      //   console.log(result);
-      //   if (result.message === "success") {
-      //     toast.success(
-      //       "We appreciate you providing your information. Rest assured, we'll be in touch with you shortly.",
-      //       {
-      //         duration: 4000,
-      //       }
-      //     );
-      //     setTimeout(() => {
-      //       thankYouPageRedirect.current.click();
-      //     }, 500);
-      //   } else {
-      //     toast.error("Internal Server Error, 404!!", {
-      //       duration: 4000,
-      //     });
-      //   }
-      // } catch (error) {
-      //   console.log(error);
-      //   toast.error("Internal Server Error, 404!!", {
-      //     duration: 4000,
-      //   });
-      // }
+      try {
+        const response1 = await fetch("http://localhost:5000/create-order", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newOrder),
+        });
+        const result = await response1.json();
+        console.log(result);
+        const options = {
+          key: "<API KEY>", // Replace with your Razorpay key_id
+          amount: order.amount,
+          currency: order.currency,
+          name: "Brain Auto Tech",
+          description: "Test Transaction",
+          order_id: order.id, // This is the order_id created in the backend
+          callback_url: "http://localhost:3000/payment-success", // Your success URL
+          prefill: {
+            name: "Your Name",
+            email: "your.email@example.com",
+            contact: "9999999999",
+          },
+          theme: {
+            color: "#F37254",
+          },
+          handler: function (response) {
+            console.log(response);
+            fetch("http://localhost:5000/verify-payment", {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                razorpay_order_id: response.razorpay_order_id,
+                razorpay_payment_id: response.razorpay_payment_id,
+                razorpay_signature: response.razorpay_signature,
+                name: "Manoja D",
+                email: "manojadkc2004@gmail.com",
+                phone: "9902798895",
+              }),
+            })
+              .then((res) => res.json())
+              .then((data) => {
+                console.log(data);
+                if (data.status === "ok") {
+                  setTimeout(() => {
+                    window.location.href = "/payment-success";
+                  }, 5000);
+                } else {
+                  alert("Payment verification failed");
+                }
+              })
+              .catch((error) => {
+                console.error("Error:", error);
+                alert("Error verifying payment");
+              });
+          },
+        };
+
+        const rzp = new Razorpay(options);
+        rzp.open();
+        // if (result.message === "success") {
+        //   toast.success(
+        //     "We appreciate you providing your information. Rest assured, we'll be in touch with you shortly.",
+        //     {
+        //       duration: 4000,
+        //     }
+        //   );
+        //   setTimeout(() => {
+        //     thankYouPageRedirect.current.click();
+        //   }, 500);
+        // } else {
+        //   toast.error("Internal Server Error, 404!!", {
+        //     duration: 4000,
+        //   });
+        // }
+      } catch (error) {
+        console.log(error);
+        toast.error("Internal Server Error, 404!!", {
+          duration: 4000,
+        });
+      }
       isLoading.current = false;
     } else {
       toast.loading(

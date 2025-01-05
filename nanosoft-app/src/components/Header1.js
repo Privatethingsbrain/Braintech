@@ -13,17 +13,25 @@ import {
   Dropdown,
   DropdownMenu,
 } from "@nextui-org/react";
+import { Poppins } from "next/font/google";
+
+const poppinsFont = Poppins({ subsets: ["latin"], weight: "300" });
+const poppinsFont1 = Poppins({ subsets: ["latin"], weight: "700" });
+const poppinsFont2 = Poppins({ subsets: ["latin"], weight: "500" });
+
 
 const Header1 = () => {
   return (
     <>
       {/* Headline Announcement - Fixed at the top with scrolling text */}
-      <div className="bg-yellow-300 w-full z-[101] fixed top-0 h-[40px] flex items-center overflow-hidden">
+      <div className="bg-[#00c2e0] w-full z-[101] fixed top-0 h-[40px] flex items-center overflow-hidden text-white">
         {/* Use flexbox here for proper vertical centering */}
         <div className="relative h-full w-full flex items-center">
           <div className="absolute flex items-center animate-scroll">
-            <p className="text-lg font-bold whitespace-nowrap">
-            {`⚠️ Please make payments only to bank accounts with the name "Brain Auto Tech Pvt Ltd"—whether through barcode, UPI, or bank details. Ensure the company name is present.  ⚠️ Important: Beware of scammers! Only trust official communications and payment details from Brain Auto Tech.`}
+            <p className="text-base font-bold whitespace-nowrap">
+              <span className={poppinsFont2.className}>
+            {` 🚨 Please make payments only to bank accounts with the name "Brain Auto Tech Pvt Ltd"—whether through barcode, UPI, or bank details. Ensure the company name is present.  ⚠️ Important: Beware of scammers! Only trust official communications and payment details from Brain Auto Tech.`}
+            </span>
             </p>
           </div>
         </div>

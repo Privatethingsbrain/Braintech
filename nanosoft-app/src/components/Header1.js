@@ -30,8 +30,8 @@ const Header1 = () => {
           <div className="absolute flex items-center animate-scroll">
             <p className="text-base font-bold whitespace-nowrap">
               <span className={poppinsFont2.className}>
-            {` 🚨 Please make payments only to bank accounts with the name "Brain Auto Tech Pvt Ltd"—whether through barcode, UPI, or bank details. Ensure the company name is present.  ⚠️ Important: Beware of scammers! Only trust official communications and payment details from Brain Auto Tech.`}
-            </span>
+                {` 🚨 Please make payments only to bank accounts with the name "Brain Auto Tech Pvt Ltd"—whether through barcode, UPI, or bank details. Ensure the company name is present.  ⚠️ Important: Beware of scammers! Only trust official communications and payment details from Brain Auto Tech.`}
+              </span>
             </p>
           </div>
         </div>
@@ -199,12 +199,15 @@ const Header1 = () => {
         >
           <Popover.Panel
             focus
-            className="absolute inset-x-0 top-0 origin-top-right transform p-2 transition xl:hidden z-[100]"
+            className="absolute   inset-x-0 top-0 origin-top-right transform p-2 transition xl:hidden z-[100]"
           >
-            <div className="rounded-lg bg-[#aee9e7] !text-[#102b5c] shadow-lg ring-1 ring-black ring-opacity-5 divide-y-2 divide-gray-50">
+            <div className="rounded-lg overflow-y-auto max-h-[90vh] bg-[#aee9e7] !text-[#102b5c] shadow-lg ring-1 ring-black ring-opacity-5 divide-y-2 divide-gray-50">
               <div className="px-5 pt-5 pb-6">
                 <div className="flex items-center justify-between">
-                  <a href="/" className="cursor-pointer outline-none border-none">
+                  <a
+                    href="/"
+                    className="cursor-pointer outline-none border-none"
+                  >
                     <img src="/Textonly.png" width={160} className="" />
                   </a>
                   <div className="-mr-2">

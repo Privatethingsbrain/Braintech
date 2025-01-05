@@ -12,7 +12,7 @@ import Indicators from "./components/Indicators";
 import LoadGoogleAdsScript from "@/components/LoadGoogleAdsScript";
 import LoadGoogleAdsIframe from "@/components/LoadGoogleAdsIframe";
 
-const page = () => {
+const Home = () => {
   const paymentForm = useRef();
    const indicatorsComp = useRef();
   const [selectedStrategy, setSelectedStrategy] = useState(null);
@@ -47,4 +47,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Home;

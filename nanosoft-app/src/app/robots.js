@@ -26,6 +26,8 @@ export default function robots() {
         "/it-services/mobile-app-development",
         "/it-services/software-development",
         "/it-services/web-development",
+        "/indicator/success/",
+        "/indicator",
       ],
     },
     sitemap: "https://brainautotech.com/sitemap.xml",

@@ -15,6 +15,7 @@ const page = () => {
   return (
     <div>
       <LoadGoogleAdsScript />
+
       <LoadGoogleAdsIframe />
       <Script src="https://checkout.razorpay.com/v1/checkout.js" />
       <Header1 />
@@ -23,7 +24,7 @@ const page = () => {
       <Economic />
       <PaymentCard />
       <Lifetime />
-      <Indicators/>
+      <Indicators />
       <Footer />
     </div>
   );

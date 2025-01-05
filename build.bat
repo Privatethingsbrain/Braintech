@@ -2,11 +2,11 @@
 REM Build Step
 echo Building Production Level Code!!
 
-cd nanosoft-app
+@REM cd nanosoft-app
 
-npm run build
+@REM npm run build
 
-cd ..
+@REM cd ..
 
 echo Building is Done!!
 

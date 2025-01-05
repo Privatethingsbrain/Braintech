@@ -1,17 +1,9 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import html2canvas from "html2canvas";
 
-function Wrapper({
-  yourName,
-  email,
-  mobile,
-  strType,
-  note,
-  rzorderid,
-  rzpaymentid,
-  rzsign,
-}) {
+function Wrapper() {
+  const [newRow, setNewRow] = useState({});
   const mainRef = useRef();
   const downloadRef = useRef();
   function downloadPageHandle() {
@@ -24,6 +16,10 @@ function Wrapper({
       });
     }
   }
+  useEffect(() => {
+    const newRow = JSON.parse(window.localStorage.getItem("newRow"));
+    setNewRow(newRow);
+  }, []);
   return (
     <div ref={mainRef} className="pb-[30px]">
       <h1 className="w-full bg-[#aee9e7] flex justify-center items-center h-[35vh] text-[#102b5c] font-[999] text-[4vh] xl:text-[8vh]">
@@ -63,15 +59,21 @@ function Wrapper({
             </h2>
             <form className="">
               <div className="flex flex-row flex-wrap gap-x-4">
-                <LabelComp label="Name" value={yourName} />
-                <LabelComp label="Email" value={email} />
-                <LabelComp label="Mobile" value={mobile} />
-                <LabelComp label="Strategy Type" value={strType} />
+                <LabelComp label="Name" value={newRow?.yourName} />
+                <LabelComp label="Email" value={newRow?.email} />
+                <LabelComp label="Mobile" value={newRow?.mobile} />
+                <LabelComp label="Strategy Type" value={newRow?.strType} />
                 <LabelComp label="Status" value="paid" />
-                <LabelComp label="Razorpay Order Id" value={rzorderid} />
-                <LabelComp label="Razorpay Payment Id" value={rzpaymentid} />
-                <LabelComp label="Razorpay Signature" value={rzsign} />
-                <LabelComp label="Note (Optional)" value={note} />
+                <LabelComp
+                  label="Razorpay Order Id"
+                  value={newRow?.rzorderid}
+                />
+                <LabelComp
+                  label="Razorpay Payment Id"
+                  value={newRow?.rzpaymentid}
+                />
+                <LabelComp label="Razorpay Signature" value={newRow?.rzsign} />
+                <LabelComp label="Note (Optional)" value={newRow?.note} />
               </div>
             </form>
           </div>
@@ -81,7 +83,7 @@ function Wrapper({
   );
 }
 
-function LabelComp({ label, value }) {
+function LabelComp({ label, value = "" }) {
   return (
     <div className="mb-4 lg:min-w-64">
       <label className="block text-sm font-semibold mb-2 text-[#1f3a68]">

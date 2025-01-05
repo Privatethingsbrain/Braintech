@@ -360,22 +360,21 @@ function PaymentForm({ selectedStrategy, setSelectedStrategy }) {
                     duration: 4000,
                   }
                 );
-                const hrefLink = `/indicator/success?name=${encodeURIComponent(
-                  yourName
-                )}&email=${encodeURIComponent(
-                  email
-                )}&mobile=${encodeURIComponent(
-                  mobileNumber
-                )}&type=${encodeURIComponent(
-                  type1
-                )}&rzorderid=${encodeURIComponent(
-                  response.razorpay_order_id
-                )}&rzpaymentid=${encodeURIComponent(
-                  response.razorpay_payment_id
-                )}&rzsign=${encodeURIComponent(
-                  response.razorpay_signature
-                )}&note=${encodeURIComponent(note)}`.replace("\n", "");
-                openNewPage(hrefLink);
+                const newRow = {
+                  yourName: yourName,
+                  email: email,
+                  mobile: mobileNumber,
+                  strType: type1,
+                  rzorderid: response.razorpay_order_id,
+                  rzpaymentid: response.razorpay_payment_id,
+                  rzsign: response.razorpay_signature,
+                  note: note,
+                };
+                window.localStorage.setItem(
+                  "newRow",
+                  JSON.stringify(newRow)
+                );
+                openNewPage(`/indicator/success`);
               } else {
                 toast.error("Internal Server Error, 404!!", {
                   duration: 4000,

@@ -15,35 +15,40 @@ const payment_info = [
   {
     plan: "Bronze",
     value: "bronze",
-    price: 99,
+    price: 1000,
     time: "Every month",
-    features: ["Buy/Sell Signals", "Updates", "Customizable", "24/7 Support"],
+    features: [
+      "Buy/Sell Signals",
+      "Updates",
+      "Bat positional indicator",
+      "Long trend indicator",
+      "Cluster Indicator",
+    ],
   },
   {
     plan: "Premium",
     value: "premium",
-    price: 199,
+    price: 6000,
     time: "Every 6 months",
     features: [
-      "Buy and Sell",
-      "Signal Alert",
-      "Customizable",
-      "24/7 Support",
-      "Feature 4",
+      "Buy/Sell Signals",
+      "Updates",
+      "Bat positional indicator",
+      "Long trend indicator or Cluster Indicator",
     ],
   },
   {
     plan: "HNI",
     value: "hni",
-    price: 299,
+    price: 10000,
     time: "Every Year",
     features: [
-      "Buy and Sell",
-      "Signal Alert",
-      "Customizable",
-      "24/7 Support",
-      "Limit Order",
-      "ProfitAlgo",
+      "Buy/Sell Signals",
+      "Updates",
+      "Bat positional indicator",
+      "Long trend indicator",
+      "Cluster Indicator",
+      "Long RMA Indicator",
     ],
   },
 ];
@@ -370,10 +375,7 @@ function PaymentForm({ selectedStrategy, setSelectedStrategy }) {
                   rzsign: response.razorpay_signature,
                   note: note,
                 };
-                window.localStorage.setItem(
-                  "newRow",
-                  JSON.stringify(newRow)
-                );
+                window.localStorage.setItem("newRow", JSON.stringify(newRow));
                 openNewPage(`/indicator/success`);
               } else {
                 toast.error("Internal Server Error, 404!!", {
@@ -539,7 +541,7 @@ function PayCard({ plan, price, time, features, handleClick }) {
           <span className={poppinsFont2.className}>{plan}</span>
         </p>
         <p className="text-3xl font-semibold mt-3">
-          <span className={poppinsFont1.className}>${price}</span>
+          <span className={poppinsFont1.className}>₹{price}</span>
         </p>
         <p className="text-xs">
           <span className={poppinsFont.className}>{time}</span>
@@ -554,7 +556,7 @@ function PayCard({ plan, price, time, features, handleClick }) {
 
       <hr className="border-t-2 border-[#00c2e0] transition-all duration-300 shadow-[0_0_10px_#00c2e0]"></hr>
       <div className={poppinsFont2.className}>
-        <ul className="mt-4 flex items-start flex-col gap-2 text-start justify-center px-[25%]">
+        <ul className="mt-4 flex items-start flex-col gap-2 text-start justify-center px-[15%]">
           {features.map((feature, index) => (
             <li
               key={index}

@@ -40,20 +40,17 @@ function Lifetime() {
           <div className="flex flex-row items-center relative py-10 pl-6">
             <div className={poppinsFont2.className}>
               <ul className="list-disc text-xl space-y-4">
-                <li>All premium features</li>
-                <li>Lifetime updates</li>
-                <li>Priority customer support</li>
-                <li>Unlimited use</li>
-                <li>Pro Scalper</li>
-                <li>ProfitAlgo</li>
-                <li>Pace Pro</li>
+                <li>Every premium tool included</li>
+                <li>Updates for life</li>
+                <li>Dedicated customer support</li>
+                <li>No restrictions on usage</li>
               </ul>
             </div>
             <div className="h-[400px] hidden md:block w-[300px] absolute -z-50">
               <img
                 alt=""
                 src="/graphics/grow.avif"
-                className="-rotate-[30deg] object-contain  h-full w-full absolute -translate-x-1/2 -translate-y-1/2 left-[85%] top-[54%] pointer-events-none"
+                className="-rotate-[30deg] object-contain  h-full w-full absolute -translate-x-1/2 -translate-y-1/2 left-[95%] top-[74%] pointer-events-none"
               />
             </div>
           </div>
@@ -73,7 +70,7 @@ function Lifetime() {
             <h4 className={poppinsFont1.className}>LIFETIME ACCESS</h4>
             <div className={poppinsFont1.className}>
               <p className="text-5xl pt-2">
-                <sup>$</sup> 499
+                <sup>₹</sup> 30,000
               </p>
             </div>
             <div className={poppinsFont.className}>

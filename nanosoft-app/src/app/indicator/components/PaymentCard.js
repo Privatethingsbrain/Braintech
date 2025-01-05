@@ -17,7 +17,7 @@ const payment_info = [
     value: "bronze",
     price: 99,
     time: "Every month",
-    features: ["Buy and Sell", "Signal Alert", "Customizable", "24/7 Support"],
+    features: ["Buy/Sell Signals", "Updates", "Customizable", "24/7 Support"],
   },
   {
     plan: "Premium",
@@ -49,16 +49,16 @@ const payment_info = [
 ];
 const Ticks = [
   {
-    point: "Simple and elegent display",
+    point: "Clean and stylish interface.",
   },
   {
-    point: "Swift delivery",
+    point: "Fast and reliable services.",
   },
   {
-    point: "Free updates",
+    point: "Complimentary updates included.",
   },
   {
-    point: "Real-time alert",
+    point: "Instant notifications in real-time.",
   },
 ];
 const PaymentCard = () => {

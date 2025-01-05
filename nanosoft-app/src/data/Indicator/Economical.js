@@ -1,6 +1,6 @@
 const Economical_content = [
   {
-    description: "Your Cheapest option in the market",
+    description: "The most cost-effective solution available.",
     imgsrc: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +19,7 @@ const Economical_content = [
   },
   {
     description:
-      "Our indications never repaint,setting us apart from the competition.",
+      "Indicators you can trust, with zero repainting.",
     imgsrc: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@ const Economical_content = [
     ),
   },
   {
-    description: `Market spanning signals: Forex, Crypto, Stocks, Indices, Fututres, and Funds.`,
+    description: `All-in-one market coverage: Crypto, Forex, Stocks, Indices, and beyond.`,
     imgsrc: (
       <svg
         xmlns="http://www.w3.org/2000/svg"

@@ -42,12 +42,12 @@ const Herosection = () => {
         <div className="md:flex justify-between items-center md:px-[15%] gap-0">
           <div className="text text-[7vh] font-[999] md:block hidden">
             <span className="text-[#00c2e0]">
-              TRADE <br /> SMARTER <br />
-              WITH{" "}
+              NOW TAKE <br /><span className="">TRADES</span>  <br />
+              WITHOUT{" "}
             </span>
             <br />
             <span className="text-[#00c2e0]">
-              <span className="text-black">BRAIN</span>AUTOTECH
+              <span className="text-black">CONFUSION</span>
             </span>
             <div className="w-40 flex justify-center items-center ">
               <a href="https://www.tradingview.com/" target="_blank">

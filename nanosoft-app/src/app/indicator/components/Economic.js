@@ -39,7 +39,7 @@ const Economic = () => {
           <div className=" md:w-[400px] bg-[#b9eef6] border-[2px] border-[#00c2e0] text-black py-2 px-4 rounded-3xl transition-all duration-300 shadow-[0_0_10px_#00c2e0] mx-4">
             <div className="text-center text-2xl px-3 pb-2 pt-8 text-[#00c2e0]">
               <div className={poppinsFont.className}>
-                Economical <span className="text-black">Execellence</span>
+              Affordable<span className="text-black"> Performance</span>
               </div>
             </div>
             {Economical_content.map((item, index) => (

@@ -12,19 +12,19 @@ const poppinsFont2 = Poppins({ subsets: ["latin"], weight: "500" });
 
 const Indicators_Data = [
   {
-    name: "Price Exhaustion Indicator",
+    name: "Cluster",
     ImgSrc: "/indicator/trade1.png",
   },
   {
-    name: "Smoothed Gaussian Moving Average",
+    name: "Long sma Indicator",
     ImgSrc: "/indicator/trade2.png",
   },
   {
-    name: "Kalman-Filtered Stochastic + ROC",
+    name: "Bat Positional Indicator",
     ImgSrc: "/indicator/trade3.png",
   },
   {
-    name: "Fourier-Smoothed Money Flow Index",
+    name: "Long rma",
     ImgSrc: "/indicator/trade4.png",
   },
   {
@@ -93,12 +93,14 @@ const Indicators = () => {
         </div>
       </div>
       <div className="flex flex-col pt-20 items-center gap-5 w-full h-[500px] md:h-[1400px]">
-        <p className="md:text-6xl text-2xl "><span className={poppinsFont1.className}>Demo Video</span></p>
+        <p className="md:text-6xl text-2xl ">
+          <span className={poppinsFont1.className}>Demo Video</span>
+        </p>
         <div className="w-full h-[100%]">
           <iframe
             width={"100%"}
             height={"100%"}
-            src="https://www.youtube.com/embed/WnUiATh7Ito?si=aImuhRedoSYoOIsa"
+            src="https://www.youtube.com/embed/7jECzktd_5s?si=hgNsFI_BMjGcAdIK"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -110,7 +112,7 @@ const Indicators = () => {
           <iframe
             width={"100%"}
             height={"100%"}
-            src="https://www.youtube.com/embed/eK24b8SjeRA?si=xAJvbdbApMTOalmj"
+            src="https://www.youtube.com/embed/WnUiATh7Ito?si=n8V3JLRnFjFwGAkS"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

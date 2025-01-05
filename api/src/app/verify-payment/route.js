@@ -24,7 +24,7 @@ async function pushRow(newRow, count = 0) {
     console.log("New Row added!", newRow);
   } catch (error) {
     console.log("Error: ", error.message);
-    pushRow(newRow, count + 1);
+    await pushRow(newRow, count + 1);
   }
 }
 
@@ -70,7 +70,12 @@ export async function POST(request, response) {
           typesPayment[reqBody.type].amount,
       };
       console.log("Payment verification successful");
-      pushRow(rowBody);
+      try {
+        await pushRow(rowBody);
+        console.log("Uploaded to Google Sheets");
+      } catch (error) {
+        console.log("Error: ", error.message);
+      }
       return NextResponse.json({ status: "ok" }, { status: 201 });
     } else {
       console.log("Payment verification failed");

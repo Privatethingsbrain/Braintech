@@ -340,7 +340,7 @@ function PaymentForm({ selectedStrategy, setSelectedStrategy }) {
         const order = await response1.json();
         // console.log(order);
         const options = {
-          key: "rzp_live_5IoKyxqlRPFLHm",
+          key: "rzp_live_vegmCeNoQ1JTfU",
           amount: order.amount,
           currency: order.currency,
           name: "Brain Auto Tech",

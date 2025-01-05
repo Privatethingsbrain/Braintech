@@ -6,6 +6,7 @@ import Select from "react-select";
 import toast from "react-hot-toast";
 import { Toaster } from "react-hot-toast";
 import BlobComp2 from "./Blobcomp2";
+import links from "@/configs/links";
 
 const poppinsFont = Poppins({ subsets: ["latin"], weight: "300" });
 const poppinsFont1 = Poppins({ subsets: ["latin"], weight: "700" });
@@ -329,7 +330,7 @@ function PaymentForm({ selectedStrategy, setSelectedStrategy }) {
       };
 
       try {
-        const response1 = await fetch("http://localhost:5000/create-order", {
+        const response1 = await fetch(`${links.server}/create-order`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -359,7 +360,7 @@ function PaymentForm({ selectedStrategy, setSelectedStrategy }) {
                 duration: 4000,
               });
               // console.log(response);
-              const res2 = await fetch("http://localhost:5000/verify-payment", {
+              const res2 = await fetch(`${links.server}/verify-payment`, {
                 method: "POST",
                 headers: {
                   "Content-Type": "application/json",

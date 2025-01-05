@@ -1,4 +1,5 @@
 "use client";
+import links from "@/configs/links";
 import React, { useRef, useState } from "react";
 import toast from "react-hot-toast";
 
@@ -69,7 +70,7 @@ function FormComp() {
 
       try {
         const response1 = await window.fetch(
-          "https://api-brainautotech.vercel.app/pushrow",
+          `${links.server}/pushrow`,
           {
             method: "POST",
             headers: {

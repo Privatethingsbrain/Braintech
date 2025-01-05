@@ -21,6 +21,7 @@ const payment_info = [
     features: [
       "Buy/Sell Signals",
       "Updates",
+      "Any one of the indicators below",
       "Bat positional indicator",
       "Long trend indicator",
       "Cluster Indicator",
@@ -34,8 +35,10 @@ const payment_info = [
     features: [
       "Buy/Sell Signals",
       "Updates",
+      "All 3 indicators below",
       "Bat positional indicator",
-      "Long trend indicator or Cluster Indicator",
+      "Long trend indicator",
+      "Cluster Indicator",
     ],
   },
   {
@@ -46,6 +49,7 @@ const payment_info = [
     features: [
       "Buy/Sell Signals",
       "Updates",
+      "All 4 indicators below",
       "Bat positional indicator",
       "Long trend indicator",
       "Cluster Indicator",

@@ -11,6 +11,10 @@ deployment:
       $DEPLOYPATH
     - >-
       /bin/cp
+      /home/brainautotech/repositories/BrainAutotechProd/compiled-prod-code/Textonly.png
+      $DEPLOYPATH
+    - >-
+      /bin/cp
       /home/brainautotech/repositories/BrainAutotechProd/compiled-prod-code/braintechlogo.PNG
       $DEPLOYPATH
     - >-
@@ -47,10 +51,6 @@ deployment:
       $DEPLOYPATH
     - >-
       /bin/cp
-      /home/brainautotech/repositories/BrainAutotechProd/compiled-prod-code/Textonly.png
-      $DEPLOYPATH
-    - >-
-      /bin/cp
       /home/brainautotech/repositories/BrainAutotechProd/compiled-prod-code/tradingview-logo-vector.svg
       $DEPLOYPATH
     - >-
@@ -60,6 +60,10 @@ deployment:
     - >-
       /bin/cp -R
       /home/brainautotech/repositories/BrainAutotechProd/compiled-prod-code/404
+      $DEPLOYPATH
+    - >-
+      /bin/cp -R
+      /home/brainautotech/repositories/BrainAutotechProd/compiled-prod-code/_next
       $DEPLOYPATH
     - >-
       /bin/cp -R
@@ -140,8 +144,4 @@ deployment:
     - >-
       /bin/cp -R
       /home/brainautotech/repositories/BrainAutotechProd/compiled-prod-code/thankyou
-      $DEPLOYPATH
-    - >-
-      /bin/cp -R
-      /home/brainautotech/repositories/BrainAutotechProd/compiled-prod-code/_next
       $DEPLOYPATH

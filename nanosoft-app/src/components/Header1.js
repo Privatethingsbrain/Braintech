@@ -24,7 +24,7 @@ const Header1 = () => {
   return (
     <>
       {/* Headline Announcement - Fixed at the top with scrolling text */}
-      <div className="bg-[#00c2e0] w-full z-[101] fixed top-0 h-[40px] flex items-center overflow-hidden text-white">
+      <div className="bg-[#4169e1] w-full z-[101] fixed top-0 h-[40px] flex items-center overflow-hidden text-white">
         {/* Use flexbox here for proper vertical centering */}
         <div className="relative h-full w-full flex items-center">
           <div className="absolute flex items-center animate-scroll">

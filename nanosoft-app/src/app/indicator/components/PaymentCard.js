@@ -66,7 +66,11 @@ const Ticks = [
     point: "Instant notifications in real-time.",
   },
 ];
-const PaymentCard = ({ paymentForm, selectedStrategy, setSelectedStrategy }) => {
+const PaymentCard = ({
+  paymentForm,
+  selectedStrategy,
+  setSelectedStrategy,
+}) => {
   return (
     <div className="md:px-[15%] px-[5%]">
       <Toaster position="top-right" reverseOrder={false} />
@@ -249,6 +253,7 @@ const PaymentCard = ({ paymentForm, selectedStrategy, setSelectedStrategy }) => 
 
 function PaymentForm({ selectedStrategy, setSelectedStrategy }) {
   const [yourName, setYourName] = useState("");
+  const [tradingViewName, setTradingViewName] = useState("");
   const [email, setEmail] = useState("");
   const [mobileNumber, setMobileNumber] = useState("");
   const [note, setNote] = useState("");
@@ -273,6 +278,22 @@ function PaymentForm({ selectedStrategy, setSelectedStrategy }) {
     if (isLoading.current === false) {
       isLoading.current = true;
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (!yourName) {
+        toast.error("Please enter your name.", {
+          duration: 4000,
+        });
+        isLoading.current = false;
+        return;
+      }
+      if (!tradingViewName) {
+        toast.error("Please enter your TradingView username.", {
+          duration: 4000,
+        });
+        isLoading.current = false;
+        return;
+      }
+
       if (!emailRegex.test(email)) {
         toast.error("Please enter a valid email address.", {
           duration: 4000,
@@ -348,6 +369,7 @@ function PaymentForm({ selectedStrategy, setSelectedStrategy }) {
                   razorpay_payment_id: response.razorpay_payment_id,
                   razorpay_signature: response.razorpay_signature,
                   name: yourName,
+                  tradingViewName: tradingViewName,
                   email: email,
                   phone: mobileNumber,
                   note: note,
@@ -366,6 +388,7 @@ function PaymentForm({ selectedStrategy, setSelectedStrategy }) {
                 );
                 const newRow = {
                   yourName: yourName,
+                  tradingViewName: tradingViewName,
                   email: email,
                   mobile: mobileNumber,
                   strType: type1,
@@ -443,6 +466,24 @@ function PaymentForm({ selectedStrategy, setSelectedStrategy }) {
                 required
                 value={yourName}
                 onChange={(e) => setYourName(e.target.value)}
+                type="text"
+              />
+            </div>
+            <div className="mb-4 lg:w-56">
+              <label
+                className="block text-sm font-semibold mb-2 text-[#1f3a68]"
+                htmlFor="userName"
+              >
+                TradingView Username
+              </label>
+              <input
+                name="userName"
+                id="userName"
+                placeholder="TradingView Username"
+                className="w-full px-3 py-3 border rounded-lg  text-sm"
+                required
+                value={tradingViewName}
+                onChange={(e) => setTradingViewName(e.target.value)}
                 type="text"
               />
             </div>

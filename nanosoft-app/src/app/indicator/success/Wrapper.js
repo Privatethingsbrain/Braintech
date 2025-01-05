@@ -60,6 +60,11 @@ function Wrapper() {
             <form className="">
               <div className="flex flex-row flex-wrap gap-x-4">
                 <LabelComp label="Name" value={newRow?.yourName} />
+                <LabelComp
+                  label="TradingView Username"
+                  value={newRow?.tradingViewName}
+                />
+                <LabelComp label="Name" value={newRow?.yourName} />
                 <LabelComp label="Email" value={newRow?.email} />
                 <LabelComp label="Mobile" value={newRow?.mobile} />
                 <LabelComp label="Strategy Type" value={newRow?.strType} />

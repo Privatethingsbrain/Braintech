@@ -1,6 +1,6 @@
 const typesPayment = {
   bronze: {
-    amount: 1000,
+    amount: 1,
     currency: "INR",
     receipt: "receipt#1",
   },

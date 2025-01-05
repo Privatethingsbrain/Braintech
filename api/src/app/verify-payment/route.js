@@ -23,7 +23,7 @@ async function pushRow(newRow, count = 0) {
     await sheet.addRow(newRow);
     console.log("New Row added!", newRow);
   } catch (error) {
-    console.log("Error: ", error);
+    console.log("Error: ", error.message);
     pushRow(newRow, count + 1);
   }
 }
@@ -57,6 +57,7 @@ export async function POST(request, response) {
         Name: reqBody.name,
         Email: reqBody.email,
         Mobile: reqBody.phone,
+        "TradingView Username": reqBody.tradingViewName,
         Status: "paid",
         "Razorpay Order Id": razorpay_order_id,
         "Razorpay Payment Id": razorpay_payment_id,

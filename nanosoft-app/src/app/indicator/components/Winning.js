@@ -11,8 +11,7 @@ function Winning() {
       <div className="text-center flex flex-col space-y-4">
         <h2 className="text-6xl font-bold text-[#00c2e0]">Our Winning Edge</h2>
         <p className="text-lg px-[20%]">
-          Discover ProfitPro, the ultimate online trading service featuring Pace
-          Pro, ProfitAlgo and Pro Scalper, the most advanced, cutting-edge
+          Discover BrainAutoTech, the ultimate online trading service featuring  the most advanced, cutting-edge
           indicators that unveil precise{" "}
           <span className="text-green-500">BUY</span> and{" "}
           <span className="text-red-500">SELL</span> signals, catapulting your
@@ -26,7 +25,7 @@ function Winning() {
           </div>
           <div className="py-10 flex flex-col space-y-3 w-full lg:w-[700px] justify-between px-5">
             <RightComp
-              title={"Maximize ProfitPro in every asset and timeframe"}
+              title={"Maximize in every asset and timeframe"}
               para={`Conquer the world of cryptocurrency, stocks, and forex in any timeframe on TradingView.`}
             />
             <RightComp

@@ -1,21 +1,21 @@
 const typesPayment = {
   bronze: {
-    amount: 1,
+    amount: 1000,
     currency: "INR",
     receipt: "receipt#1",
   },
   premium: {
-    amount: 2,
+    amount: 6000,
     currency: "INR",
     receipt: "receipt#1",
   },
   hni: {
-    amount: 3,
+    amount: 10000,
     currency: "INR",
     receipt: "receipt#1",
   },
   lifetime: {
-    amount: 4,
+    amount: 30000,
     currency: "INR",
     receipt: "receipt#1",
   },

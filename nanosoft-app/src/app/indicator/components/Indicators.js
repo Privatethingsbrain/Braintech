@@ -13,27 +13,19 @@ const poppinsFont2 = Poppins({ subsets: ["latin"], weight: "500" });
 const Indicators_Data = [
   {
     name: "Cluster",
-    ImgSrc: "/indicator/trade1.png",
+    ImgSrc: "/indicator/cluster.png",
   },
   {
     name: "Long sma Indicator",
-    ImgSrc: "/indicator/trade2.png",
+    ImgSrc: "/indicator/long_trend.png",
   },
   {
     name: "Bat Positional Indicator",
-    ImgSrc: "/indicator/trade3.png",
+    ImgSrc: "/indicator/bat.png",
   },
   {
     name: "Long rma",
-    ImgSrc: "/indicator/trade4.png",
-  },
-  {
-    name: "Price Exhaustion Indicator",
-    ImgSrc: "/indicator/trade5.png",
-  },
-  {
-    name: "Smoothed Gaussian Moving Average",
-    ImgSrc: "/indicator/trade6.png",
+    ImgSrc: "/indicator/long_rma.png",
   },
 ];
 

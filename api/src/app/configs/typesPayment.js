@@ -14,6 +14,11 @@ const typesPayment = {
     currency: "INR",
     receipt: "receipt#1",
   },
+  lifetime: {
+    amount: 4,
+    currency: "INR",
+    receipt: "receipt#1",
+  },
 };
 
 export default typesPayment;

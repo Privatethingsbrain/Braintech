@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useEffect, useRef } from "react";
 import { Poppins } from "next/font/google";
 const poppinsFont = Poppins({ subsets: ["latin"], weight: "300" });
@@ -9,27 +9,27 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function Lifetime() {
+function Lifetime({ paymentForm, setSelectedStrategy }) {
   const rightSide = useRef();
-   useEffect(() => {
-     const element = rightSide.current;
-     gsap.fromTo(
-       element,
-       { scale: 0.7, opacity: 0.5 },
-       {
-         scale: 1,
-         opacity: 1,
-         duration: 1,
-         ease: "power3.out",
-         scrollTrigger: {
-           trigger: element,
-           start: "top 80%",
-           end: "bottom 60%",
-           toggleActions: "play none none none",
-         },
-       }
-     );
-   }, []);
+  useEffect(() => {
+    const element = rightSide.current;
+    gsap.fromTo(
+      element,
+      { scale: 0.7, opacity: 0.5 },
+      {
+        scale: 1,
+        opacity: 1,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: element,
+          start: "top 80%",
+          end: "bottom 60%",
+          toggleActions: "play none none none",
+        },
+      }
+    );
+  }, []);
   return (
     <div className="px-[5%] pt-6 pb-[50px] ">
       <div className="w-full lg:flex-row flex flex-col space-y-5 lg:space-y-0 justify-center lg:space-x-7">
@@ -76,7 +76,19 @@ function Lifetime() {
             <div className={poppinsFont.className}>
               <p className="text-xs">One-time payment!</p>
             </div>
-            <button className="bg-[#f5511d] py-3 px-5 rounded-3xl text-sm mt-8 text-white hover:bg-[#e04819] focus:ring-2 focus:ring-[#f5511d] focus:outline-none">
+            <button
+              onClick={() => {
+                if (paymentForm.current) {
+                  paymentForm.current.scrollIntoView();
+                  const newOption = {
+                    value: "lifetime",
+                    label: "Lifetime Access",
+                  };
+                  setSelectedStrategy(newOption);
+                }
+              }}
+              className="bg-[#f5511d] py-3 px-5 rounded-3xl text-sm mt-8 text-white hover:bg-[#e04819] focus:ring-2 focus:ring-[#f5511d] focus:outline-none"
+            >
               <span className={poppinsFont2.className}>Purchase</span>
             </button>
           </div>

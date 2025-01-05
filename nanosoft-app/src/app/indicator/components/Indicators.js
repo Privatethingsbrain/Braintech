@@ -29,7 +29,7 @@ const Indicators_Data = [
   },
 ];
 
-const Indicators = () => {
+const Indicators = ({ indicatorsComp }) => {
   const containerRef = useRef(null);
 
   useEffect(() => {
@@ -55,7 +55,7 @@ const Indicators = () => {
     });
   }, []);
   return (
-    <div className="px-[15%] py-[50px]">
+    <div ref={indicatorsComp} className="px-[15%] py-[50px]">
       <BlobComp3 />
       <div className={poppinsFont1.className}>
         <p className="md:text-6xl text-4xl text-black text-center">

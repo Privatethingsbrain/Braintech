@@ -10,7 +10,7 @@ const poppinsFont = Poppins({ subsets: ["latin"], weight: "400" });
 const poppinsFont1 = Poppins({ subsets: ["latin"], weight: "700" });
 const poppinsFont2 = Poppins({ subsets: ["latin"], weight: "500" });
 
-const Herosection = () => {
+const Herosection = ({ paymentForm, setSelectedStrategy }) => {
   useEffect(() => {
     gsap.fromTo(
       ".image-container img",
@@ -42,7 +42,8 @@ const Herosection = () => {
         <div className="md:flex justify-between items-center md:px-[15%] gap-0">
           <div className="text text-[7vh] font-[999] md:block hidden">
             <span className="text-[#00c2e0]">
-              NOW TAKE <br /><span className="">TRADES</span>  <br />
+              NOW TAKE <br />
+              <span className="">TRADES</span> <br />
               WITHOUT{" "}
             </span>
             <br />
@@ -72,9 +73,9 @@ const Herosection = () => {
                 width={500}
                 srcSet="https://static.wixstatic.com/media/ad6c04_5286e68f2dd54b9499038c70fb6333c4~mv2.png/v1/fill/w_587,h_440,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/use%20this.png 1x, https://static.wixstatic.com/media/ad6c04_5286e68f2dd54b9499038c70fb6333c4~mv2.png/v1/fill/w_1174,h_880,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/use%20this.png 2x"
                 loading="lazy"
-                className="w-350px h-400px object-cover"
+                className="object-cover"
               />
-              <div className="absolute top-3 left-[63px] md:block hidden">
+              <div className="absolute top-3 left-[63px] xl:block hidden">
                 <img
                   src="https://plus.unsplash.com/premium_photo-1682310075673-b408eb1ca6fd?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dHJhZGluZ3xlbnwwfHwwfHx8MA%3D%3D"
                   alt="Background graphic"
@@ -84,22 +85,24 @@ const Herosection = () => {
                   loading="lazy"
                 />
               </div>
-              <div className="absolute top-2 left-14 md:hidden">
-                <img
-                  src="https://plus.unsplash.com/premium_photo-1682310075673-b408eb1ca6fd?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8dHJhZGluZ3xlbnwwfHwwfHx8MA%3D%3D"
-                  alt="Background graphic laptop"
-                  className="object-cover"
-                  width="275"
-                  height="323"
-                  loading="lazy"
-                />
-              </div>
             </div>
           </div>
         </div>
 
         <div className="flex items-center justify-center text-[2.5vh] font-normal tracking-tight">
-          <button className="border-[2px] border-[#00c2e0] text-black py-2 px-4 rounded-full transition-all duration-300 shadow-[0_0_10px_#00c2e0] hover:bg-[#00c2e0]">
+          <button
+            onClick={() => {
+              if (paymentForm.current) {
+                paymentForm.current.scrollIntoView();
+                const newOption = {
+                  value: "lifetime",
+                  label: "Lifetime Access",
+                };
+                setSelectedStrategy(newOption);
+              }
+            }}
+            className="border-[2px] border-[#00c2e0] text-black py-2 px-4 rounded-full transition-all duration-300 shadow-[0_0_10px_#00c2e0] hover:bg-[#00c2e0]"
+          >
             <span className={poppinsFont2.className}>GET ACCESS</span>
           </button>
         </div>

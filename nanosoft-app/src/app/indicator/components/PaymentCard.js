@@ -66,9 +66,7 @@ const Ticks = [
     point: "Instant notifications in real-time.",
   },
 ];
-const PaymentCard = () => {
-  const formRef = useRef();
-  const [selectedStrategy, setSelectedStrategy] = useState(null);
+const PaymentCard = ({ paymentForm, selectedStrategy, setSelectedStrategy }) => {
   return (
     <div className="md:px-[15%] px-[5%]">
       <Toaster position="top-right" reverseOrder={false} />
@@ -205,8 +203,8 @@ const PaymentCard = () => {
             key={index}
             {...eleData}
             handleClick={() => {
-              if (formRef.current) {
-                formRef.current.scrollIntoView();
+              if (paymentForm.current) {
+                paymentForm.current.scrollIntoView();
                 const newOption = {
                   value: eleData.value,
                   label: eleData.plan,
@@ -217,7 +215,7 @@ const PaymentCard = () => {
           />
         ))}
       </div>
-      <div ref={formRef} className="py-4">
+      <div ref={paymentForm} className="py-4">
         <div>
           <PaymentForm
             selectedStrategy={selectedStrategy}
@@ -259,6 +257,7 @@ function PaymentForm({ selectedStrategy, setSelectedStrategy }) {
     { value: "bronze", label: "Bronze" },
     { value: "premium", label: "Premium" },
     { value: "hni", label: "HNI" },
+    { value: "lifetime", label: "Lifetime Access" },
   ];
   function openNewPage(link) {
     if (window) {
@@ -503,11 +502,11 @@ function PaymentForm({ selectedStrategy, setSelectedStrategy }) {
               />
             </div>
             <div className="mb-4 lg:w-56">
-              <label className="block text-sm font-semibold mb-4 text-[#1f3a68]">
+              <label className="block text-sm font-semibold mb-2 text-[#1f3a68]">
                 Strategy
               </label>
               <Select
-                className="w-full  rounded-lg  text-sm"
+                className="w-full rounded-lg text-sm"
                 options={options}
                 defaultValue={selectedStrategy}
                 value={selectedStrategy}
@@ -535,7 +534,7 @@ function PaymentForm({ selectedStrategy, setSelectedStrategy }) {
 
 function PayCard({ plan, price, time, features, handleClick }) {
   return (
-    <div className=" md:w-[300px] bg-[#b9eef6] h-[420px] border-[2px] border-[#00c2e0] text-black pb-2  rounded-[1.7rem] transition-all duration-300 shadow-[0_0_10px_#00c2e0] mx-4 mt-7">
+    <div className=" md:w-[300px] bg-[#b9eef6] min-h-[420px] border-[2px] border-[#00c2e0] text-black pb-2  rounded-[1.7rem] transition-all duration-300 shadow-[0_0_10px_#00c2e0] mx-4 mt-7">
       <div className="h-[50%] flex flex-col justify-center items-center bg-[#00c2e0] rounded-t-3xl">
         <p className="text-2xl font-semibold">
           <span className={poppinsFont2.className}>{plan}</span>

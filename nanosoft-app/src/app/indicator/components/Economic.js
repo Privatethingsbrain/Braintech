@@ -11,27 +11,27 @@ const poppinsFont = Poppins({ subsets: ["latin"], weight: "600" });
 const poppinsFont1 = Poppins({ subsets: ["latin"], weight: "700" });
 const poppinsFont2 = Poppins({ subsets: ["latin"], weight: "500" });
 
-const Economic = () => {
-    useEffect(() => {
-        gsap.fromTo(
-          ".image1 img",
-          { opacity: 0, scale: 1, y: 100 },  
-          {
-            opacity: 1,
-            scale: 1,
-            y: 0,  
-            duration: 1,
-            ease: "power3.out",
-            stagger: 0.5,
-            scrollTrigger: {
-              trigger: ".image1",
-              start: "bottom bottom",  
-              end: "top top",  
-              toggleActions: "play none none reverse", 
-            },
-          }
-        );
-      }, []);
+const Economic = ({ paymentForm, setSelectedStrategy, indicatorsComp }) => {
+  useEffect(() => {
+    gsap.fromTo(
+      ".image1 img",
+      { opacity: 0, scale: 1, y: 100 },
+      {
+        opacity: 1,
+        scale: 1,
+        y: 0,
+        duration: 1,
+        ease: "power3.out",
+        stagger: 0.5,
+        scrollTrigger: {
+          trigger: ".image1",
+          start: "bottom bottom",
+          end: "top top",
+          toggleActions: "play none none reverse",
+        },
+      }
+    );
+  }, []);
   return (
     <div className="pb-[50px]">
       <div className="md:flex md:items-center md:justify-center px-5">
@@ -39,7 +39,7 @@ const Economic = () => {
           <div className=" md:w-[400px] bg-[#b9eef6] border-[2px] border-[#00c2e0] text-black py-2 px-4 rounded-3xl transition-all duration-300 shadow-[0_0_10px_#00c2e0] mx-4">
             <div className="text-center text-2xl px-3 pb-2 pt-8 text-[#00c2e0]">
               <div className={poppinsFont.className}>
-              Affordable<span className="text-black"> Performance</span>
+                Affordable<span className="text-black"> Performance</span>
               </div>
             </div>
             {Economical_content.map((item, index) => (
@@ -53,7 +53,13 @@ const Economic = () => {
               </div>
             ))}
             <div className="flex justify-center pb-6 ">
-              <button className="border-[2px] border-[#00c2e0] hover:bg-[#00c2e0] text-black py-2 px-4 rounded-full transition-all duration-300 shadow-[0_0_10px_#00c2e0] flex items-center justify-center gap-1">
+              <button
+              onClick={() => {
+                 if (indicatorsComp.current) {
+                   indicatorsComp.current.scrollIntoView();
+                 }
+              }}
+               className="border-[2px] border-[#00c2e0] hover:bg-[#00c2e0] text-black py-2 px-4 rounded-full transition-all duration-300 shadow-[0_0_10px_#00c2e0] flex items-center justify-center gap-1">
                 <p>Explore Indicators</p>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -95,8 +101,23 @@ const Economic = () => {
       </div>
       <div className="bg-[#00c2e0] w-full h-[60px] mt-12 flex items-center justify-center">
         <div className="flex items-center justify-center gap-4">
-          <div className="text-lg text-white font-semibold"> <span className={poppinsFont.className}>GET LIFETIME ACCESS</span></div>
-          <button className="border-[2px] text-sm border-[#f5511d] bg-[#f5511d] text-white py-2 px-4 rounded-full transition-all duration-300 shadow-[0_0_5px_#f5511d] flex items-center justify-center gap-1 ">
+          <div className="text-lg text-white font-semibold">
+            {" "}
+            <span className={poppinsFont.className}>GET LIFETIME ACCESS</span>
+          </div>
+          <button
+            onClick={() => {
+              if (paymentForm.current) {
+                paymentForm.current.scrollIntoView();
+                const newOption = {
+                  value: "lifetime",
+                  label: "Lifetime Access",
+                };
+                setSelectedStrategy(newOption);
+              }
+            }}
+            className="border-[2px] text-sm border-[#f5511d] bg-[#f5511d] text-white py-2 px-4 rounded-full transition-all duration-300 shadow-[0_0_5px_#f5511d] flex items-center justify-center gap-1 "
+          >
             <span className={poppinsFont.className}>BUY NOW</span>
           </button>
         </div>

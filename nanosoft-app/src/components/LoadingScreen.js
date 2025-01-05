@@ -27,7 +27,7 @@ function LoadingScreen() {
         <div className="h-[25%] w-[25%] text-center text-3xl">
           <img
             alt=""
-            className="w-full h-full object-cover animate-spinaround"
+            className="w-full h-full object-contain animate-spinaround"
             src="https://iili.io/dLmIrFe.md.png"
           />
         </div>

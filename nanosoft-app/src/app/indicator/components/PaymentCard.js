@@ -75,6 +75,8 @@ const PaymentCard = ({
   paymentForm,
   selectedStrategy,
   setSelectedStrategy,
+  selectedStrategyBronze,
+  setSelectedStrategyBronze,
 }) => {
   return (
     <div className="md:px-[15%] px-[5%]">
@@ -229,6 +231,8 @@ const PaymentCard = ({
           <PaymentForm
             selectedStrategy={selectedStrategy}
             setSelectedStrategy={setSelectedStrategy}
+            selectedStrategyBronze={selectedStrategyBronze}
+            setSelectedStrategyBronze={setSelectedStrategyBronze}
           />
         </div>
       </div>
@@ -256,7 +260,12 @@ const PaymentCard = ({
   );
 };
 
-function PaymentForm({ selectedStrategy, setSelectedStrategy }) {
+function PaymentForm({
+  selectedStrategy,
+  setSelectedStrategy,
+  selectedStrategyBronze,
+  setSelectedStrategyBronze,
+}) {
   const [yourName, setYourName] = useState("");
   const [tradingViewName, setTradingViewName] = useState("");
   const [email, setEmail] = useState("");
@@ -268,6 +277,11 @@ function PaymentForm({ selectedStrategy, setSelectedStrategy }) {
     { value: "premium", label: "Premium" },
     { value: "hni", label: "HNI" },
     { value: "lifetime", label: "Lifetime Access" },
+  ];
+  const optionsBronze = [
+    { value: "bat-positional-indicator", label: "Bat positional indicator" },
+    { value: "long-trend-indicator", label: "Long trend indicator" },
+    { value: "cluster-indicator", label: "Cluster Indicator" },
   ];
   function openNewPage(link) {
     if (window) {
@@ -318,7 +332,14 @@ function PaymentForm({ selectedStrategy, setSelectedStrategy }) {
       }
 
       if (!selectedStrategy) {
-        toast.error("Please select a strategy", {
+        toast.error("Please select a Plan", {
+          duration: 4000,
+        });
+        isLoading.current = false;
+        return;
+      }
+      if (selectedStrategy.value === "bronze" && !selectedStrategyBronze) {
+        toast.error("Please select a Indicator for Bronze", {
           duration: 4000,
         });
         isLoading.current = false;
@@ -328,8 +349,17 @@ function PaymentForm({ selectedStrategy, setSelectedStrategy }) {
         duration: 4000,
       });
       const type1 = selectedStrategy.value;
+      const type2 =
+        selectedStrategy.value === "bronze" ? selectedStrategyBronze.value : "";
       const newOrder = {
-        notes: { note: note },
+        notes: {
+          name: yourName,
+          tradingViewName: tradingViewName,
+          email: email,
+          phone: mobileNumber,
+          note: note,
+          type: type1,
+        },
         type: type1,
       };
 
@@ -379,6 +409,7 @@ function PaymentForm({ selectedStrategy, setSelectedStrategy }) {
                   phone: mobileNumber,
                   note: note,
                   type: type1,
+                  typeBronze: type2,
                 }),
               });
               const resOut2 = await res2.json();
@@ -397,6 +428,7 @@ function PaymentForm({ selectedStrategy, setSelectedStrategy }) {
                   email: email,
                   mobile: mobileNumber,
                   strType: type1,
+                  typeBronze: type2,
                   rzorderid: response.razorpay_order_id,
                   rzpaymentid: response.razorpay_payment_id,
                   rzsign: response.razorpay_signature,
@@ -549,7 +581,7 @@ function PaymentForm({ selectedStrategy, setSelectedStrategy }) {
             </div>
             <div className="mb-4 lg:w-56">
               <label className="block text-sm font-semibold mb-2 text-[#1f3a68]">
-                Strategy
+                Plan
               </label>
               <Select
                 className="w-full rounded-lg text-sm"
@@ -559,8 +591,22 @@ function PaymentForm({ selectedStrategy, setSelectedStrategy }) {
                 onChange={setSelectedStrategy}
               />
             </div>
+            {selectedStrategy !== null &&
+              selectedStrategy.value === "bronze" && (
+                <div className="mb-4 lg:w-56">
+                  <label className="block text-sm font-semibold mb-2 text-[#1f3a68]">
+                    Indicator
+                  </label>
+                  <Select
+                    className="w-full rounded-lg text-sm"
+                    options={optionsBronze}
+                    defaultValue={selectedStrategyBronze}
+                    value={selectedStrategyBronze}
+                    onChange={setSelectedStrategyBronze}
+                  />
+                </div>
+              )}
           </div>
-
           <div className="flex justify-center">
             <input
               type="submit"

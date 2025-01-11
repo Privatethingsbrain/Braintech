@@ -67,7 +67,13 @@ function Wrapper() {
                 <LabelComp label="Name" value={newRow?.yourName} />
                 <LabelComp label="Email" value={newRow?.email} />
                 <LabelComp label="Mobile" value={newRow?.mobile} />
-                <LabelComp label="Strategy Type" value={newRow?.strType} />
+                <LabelComp label="Plan Type" value={newRow?.strType} />
+                {newRow?.typeBronze && (
+                  <LabelComp
+                    label="Indicator Type"
+                    value={newRow?.typeBronze}
+                  />
+                )}
                 <LabelComp label="Status" value="paid" />
                 <LabelComp
                   label="Razorpay Order Id"

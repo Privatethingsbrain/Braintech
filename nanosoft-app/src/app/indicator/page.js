@@ -14,8 +14,9 @@ import LoadGoogleAdsIframe from "@/components/LoadGoogleAdsIframe";
 
 const Home = () => {
   const paymentForm = useRef();
-   const indicatorsComp = useRef();
+  const indicatorsComp = useRef();
   const [selectedStrategy, setSelectedStrategy] = useState(null);
+  const [selectedStrategyBronze, setSelectedStrategyBronze] = useState(null);
   return (
     <div>
       <LoadGoogleAdsScript />
@@ -36,6 +37,8 @@ const Home = () => {
         paymentForm={paymentForm}
         selectedStrategy={selectedStrategy}
         setSelectedStrategy={setSelectedStrategy}
+        selectedStrategyBronze={selectedStrategyBronze}
+        setSelectedStrategyBronze={setSelectedStrategyBronze}
       />
       <Lifetime
         paymentForm={paymentForm}

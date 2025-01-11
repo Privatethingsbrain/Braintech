@@ -63,7 +63,8 @@ export async function POST(request, response) {
         "Razorpay Payment Id": razorpay_payment_id,
         "Razorpay Signature": razorpay_signature,
         Note: reqBody.note,
-        "Strategy Type": reqBody.type,
+        "Plan Type": reqBody.type,
+        "Indicator Type": reqBody.typeBronze,
         "Amount Paid":
           typesPayment[reqBody.type].currency +
           " " +

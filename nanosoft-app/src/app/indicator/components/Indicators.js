@@ -68,7 +68,9 @@ const Indicators = ({ indicatorsComp }) => {
           ref={containerRef}
         >
           {Indicators_Data.map((item, index) => (
-            <div
+            <a
+              href={item.ImgSrc}
+              target="_blank"
               key={index}
               className="flex flex-col items-center md:w-[calc(50%-1rem)] pt-5 gsap-item"
             >
@@ -80,7 +82,7 @@ const Indicators = ({ indicatorsComp }) => {
                 alt={item.name}
                 className="mt-2 cursor-pointer hover:scale-105 md:w-[400px] md:h-[250px] w-[400px] h-[200px] mx-auto border-[2px] border-[#00c2e0] text-black   transition-all duration-300 shadow-[0_0_10px_#00c2e0]"
               />
-            </div>
+            </a>
           ))}
         </div>
       </div>

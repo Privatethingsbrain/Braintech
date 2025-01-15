@@ -7,6 +7,10 @@ deployment:
       /home/brainautotech/repositories/BrainAutotechProd/compiled-prod.tar
     - >-
       /bin/cp
+      /home/brainautotech/repositories/BrainAutotechProd/compiled-prod-code/.DS_Store
+      $DEPLOYPATH
+    - >-
+      /bin/cp
       /home/brainautotech/repositories/BrainAutotechProd/compiled-prod-code/404.html
       $DEPLOYPATH
     - >-

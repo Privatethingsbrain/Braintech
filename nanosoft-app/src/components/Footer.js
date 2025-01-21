@@ -36,7 +36,7 @@ function Footer() {
               </p>
               <div className="flex justify-start gap-4 items-start pb-8 pl-[10px]">
                 <a
-                  href="https://facebook.com/brainautotech"
+                  href="https://www.facebook.com/brainautotechprivatelimited"
                   target="_blank"
                   title="Facebook"
                 >

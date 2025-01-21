@@ -22,18 +22,18 @@ const Page = () => {
                   <img src="/image/icici bank.png" width={250} className="" />
                 </div>
                 <p className="p-[12px] font-medium">
-                  <span className=" font-bold">Bank Name:-</span> Axis Bank
+                  <span className=" font-bold">Bank Name:-</span> ICICI Bank
                 </p>
                 <p className="p-[12px] font-medium">
                   <span className=" font-bold">Account Name :-</span>{" "}
-                  Brainautotech Pvt Ltd 
+                  BRAINAUTOTECH PRIVATE LIMITED
                 </p>
                 <p className="p-[12px] font-medium">
                   <span className=" font-bold">Account Number :- </span>
-                  924020027157296
+                  004105021241
                 </p>
                 <p className="p-[12px] font-medium">
-                  <span className=" font-bold">IFSC Code :-</span> UTIB0002661
+                  <span className=" font-bold">IFSC Code :-</span> ICIC0000041
                 </p>
               </div>
               <div className="shadow-xl w-full p-[30px] rounded-xl mt-[50px] hover:-translate-y-3 transition-transform duration-300 ease-out">

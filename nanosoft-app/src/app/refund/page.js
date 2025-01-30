@@ -32,6 +32,9 @@ const Page = () => {
             Payment from the customer below 18 or 65+.
           </li>
           <li className="text-left text-[#555555] pt-[10px]">
+            If you are eligible for refund, your refund will be initiated within 24 to 72 hours on working days.
+          </li>
+          <li className="text-left text-[#555555] pt-[10px]">
             {
               "If anyone from our company committed for Demate Handling services. (We do not provide demate handling / investment advisor or such type of services).."
             }

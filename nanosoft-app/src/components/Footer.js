@@ -136,16 +136,16 @@ function Footer() {
 
                 <div className="text-[#566a8d] pt-[15px]  flex-col font-medium">
                   <li className="hover:underline">
-                    <a href="/api-bridge">➠ Api Bridge</a>
+                    <a href="/algo-services/api-bridge/">➠ Api Bridge</a>
                   </li>
                   <li className="hover:underline">
-                    <a href="/algo">➠ Algo software</a>
+                    <a href="/algo-services/algo-trading/">➠ Algo software</a>
                   </li>
                   <li className="hover:underline">
-                    <a href="/auto">➠ Auto Buy & Sell signals</a>
+                    <a href="/algo-services/auto-buy-and-sell-signal/">➠ Auto Buy & Sell signals</a>
                   </li>
                   <li className="hover:underline">
-                    <a href="/strategy">➠ Strategy Development</a>
+                    <a href="/algo-services/strategy-development/">➠ Strategy Development</a>
                   </li>
                 </div>
               </ul>

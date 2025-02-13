@@ -23,7 +23,7 @@ const Page = () => {
           </p>
           <p className="text-left text-black pt-[10px] leading-loose font-medium">
             {
-              "Please go through the terms & conditions of our company's as per SEBI'S guidelines"
+              "Please go through the terms & conditions of our company"
             }
           </p>
           <li className="text-left text-[#555555] pt-[10px]">

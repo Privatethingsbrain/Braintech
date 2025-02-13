@@ -52,7 +52,7 @@ const UlLiCompData = [
 
 const OlLiCompData = [
   {
-    text: `The Bridge works on the basis of "Signals". A Signal is generally a sign (not choice) to Buy or Sell with explicit conditions. The Bridge forms 4 sorts of Signals:`,
+    text: `The Bridge works on the basis of "Signals". A Signal is generally a sign. The Bridge forms 4 sorts of Signals:`,
   },
   {
     text: "Long Entry (LE): Equivalent to new Buy for making Long position.",

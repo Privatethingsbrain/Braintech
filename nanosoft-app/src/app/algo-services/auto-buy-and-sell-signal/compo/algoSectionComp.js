@@ -9,18 +9,18 @@ function SectionCompPara({ text }) {
 
 const SectionCompParaData = [
   {
-    text: `An auto buy and sell signal in algo trading refers to a robust system that uses algorithms to analyze
-market data and condition, and generate automated signals that indicate when to buy or sell a
+    text: `An auto signal in algo trading refers to a robust system that uses algorithms to analyze
+market data and condition, and generate automated signals that indicate when to take action
 particular asset. These signals are triggered based on certain criteria that are set by the algorithm, which
 could include numerous conditions, such as historical data analysis, technical indicators and statistical
 models.`,
   },
 
   {
-    text: `At Brain Auto Tech, we offer auto buy and sell services in algo trading that give a powerful way to boost
-your trading speed and efficiency. Our cutting-edge software programs are aimed to send 100%
+    text: `At Brain Auto Tech, we offer algo services that give a powerful way to boost
+your working speed and efficiency. Our cutting-edge software programs are aimed to send 100%
 accurate signals, helping traders make informed decisions without having to manually analyze the
-market and losing out profitable opportunities. Here are some key features of our auto buy and sell
+market and losing out profitable opportunities. Here are some key features of our automatic working
 services.`,
   },
 ];
@@ -28,7 +28,7 @@ services.`,
 const SectionCompParaData1 = [
   {
     text: ` Whether you are a beginner looking to get started in the trading market or an experienced trader
-seeking to enhance your strategy, contact Brain Auto Tech today to leverage our auto buy and sell
+seeking to enhance your strategy, contact Brain Auto Tech today to leverage our auto
 services to navigate the trading market confidently.`,
   },
 ];
@@ -36,7 +36,7 @@ services to navigate the trading market confidently.`,
 const UlLiCompData = [
   {
     title: `Real-time Signal Generation :`,
-    description: `This feature involves regular analysis of the market data to generate buy and sell signals in real time.
+    description: `This feature involves regular analysis of the market data to generate signals in real time.
 Using indicators like moving averages, MACD and RSI, the algorithm can provide accurate and timely
 signals, allowing you to capitalize on market opportunities.`,
   },
@@ -48,7 +48,7 @@ individual goals and risk appetite.`,
   },
   {
     title: `Automated Trade Execution :`,
-    description: `Our auto buy and sell signals also facilitate the automated execution of trades, which saves time and
+    description: `Our auto signals also facilitate the automated execution of trades, which saves time and
 reduces manual intervention in the trading process. This feature can be seamlessly integrated with
 different trading platforms and brokerage accounts.`,
   },

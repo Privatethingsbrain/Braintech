@@ -16,49 +16,49 @@ while reducing human intervention.`,
   },
 
   {
-    text: `At Brain Auto Tech, we offer exceptional algorithmic trading services designed to empower investors
+    text: `At Brain Auto Tech, we offer exceptional algorithmic services designed to empower investors
 and traders. Our cutting-edge algorithms, created by a team of experts, provide incredible speed,
-efficiency and precision in executing trades. Here are some algo trading services we offer:`,
+efficiency and precision in executing trades. Here are some algo services we offer:`,
   },
 ];
 
 const SectionCompParaData1 = [
   {
     text: `At Brain Auto Tech, we are committed to helping you transform the way you trade. Contact us today to
-learn how you can unlock full trading potential and achieve your desired financial goals.`,
+learn how you can unlock full potential and achieve your desired financial goals.`,
   },
 ];
 
 const UlLiCompData = [
   {
-    title: `Automated Algo Trading :`,
-    description: `Our algorithms automatically perform buy and sell orders based on predefined criteria, such as price,
+    title: `Automated Algo Software :`,
+    description: `Our algorithms automatically perform orders based on predefined criteria, such as price,
 quantity and timing, without or with minimal human intervention.`,
   },
   {
     title: `Strategies :`,
-    description: `Our algo trading services include using common strategies, such as trend following, scalping, statistical
+    description: `Our algo services include using common strategies, such as trend following, scalping, statistical
 arbitrage, market monitoring and so on. Each strategy has its own rules and objectives.`,
   },
   {
     title: `Fast and Reliable :`,
     description: `Our algorithms are designed to process market data and execute trade in fractions of a second, which is
-faster than manual trading.`,
+faster than manual working.`,
   },
   {
     title: `Customization and Flexibility :`,
-    description: `Our algorithms can be easily customized to suit specific trading preferences, goals and strategies of the
+    description: `Our algorithms can be easily customized to suit specific preferences, goals and strategies of the
 traders. The flexibility enables the creation of tailored approaches based on different market conditions.`,
   },
   {
     title: `Seamless Integration with Trading Platforms :`,
-    description: `Our algo trading services can be integrated with trading platforms to facilitate direct market access
+    description: `Our algo software services can be integrated with trading platforms to facilitate direct market access
 (DMA) and smooth order execution.`,
   },
   {
     title: `Backtesting :`,
-    description: `Our algo trading algorithms are usually backtested against historical data values to assess and optimize
-their performance. This ensures your trading platform reaps profitable results in similar market
+    description: `Our algo software algorithms are usually backtested against historical data values to assess and optimize
+their performance. This ensures your working platform reaps profitable results in similar market
 conditions.`,
   },
 ];

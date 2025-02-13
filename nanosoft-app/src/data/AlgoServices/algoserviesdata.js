@@ -14,8 +14,8 @@ const Algoservicescontent = [
     routing: `/algo-services/algo-trading`,
   },
   {
-    title: "Auto Buy & Sell Signal",
-    description: `Auto Buy Sell signal programming software is an interesting and extraordinary tool for the brokers.`,
+    title: "Signals",
+    description: `Auto programming software is an interesting and extraordinary tool for the brokers.`,
     imgSrc: `https://cdn-icons-png.flaticon.com/512/7314/7314579.png`,
     footerNote: "Read more",
     routing: `/algo-services/auto-buy-and-sell-signal`,

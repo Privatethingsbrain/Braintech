@@ -1,46 +1,46 @@
 const metadataProps = {
   home: {
     title:
-      "Innovative AI-Powered Solutions for Trading & Investment - BrainAutoTech",
+      "Innovative AI-Powered Solutions for IT Services - BrainAutoTech",
     description: `Explore our advanced ALGO software, 
-    featuring powerful strategies for seamless trading 
+    featuring powerful strategies for seamless working 
     across multiple brokers. Achieve maximum convenience and 
     success in your investments with BrainAutoTech. &#128222; +91 9179042673`,
   },
   algoServices: {
     title:
-      "Best Algo Trading Software & Algorithmic Trading Platform | BrainAutoTech",
-    description: `We offer powerful algorithmic trading strategies, 
+      "Best Algo Software & Algorithmic Working Platform | BrainAutoTech",
+    description: `We offer powerful algorithmic working strategies, 
     free options, and seamless integration across brokers. Explore our 
-    algo trading service and simple indicators for successful stock trading. 
-    Check our prices and find the best algo trading solution today!`,
+    algo service and simple indicators for successful stock working. 
+    Check our prices and find the best algo solution today!`,
     apiBridge: {
       title:
-        "API Bridge - Seamless Algo Trading Integration with Amibroker, MT4, TradingView, and More - BrainAutoTech",
-      description: `Explore API Bridge for seamless algo trading 
+        "API Bridge - Seamless Algo Working Integration with Amibroker, MT4, TradingView, and More - BrainAutoTech",
+      description: `Explore API Bridge for seamless algo  
       with Amibroker, MT4, TradingView, Python, and more. Start 
-      trading efficiently across multiple platforms and markets with 
+      working efficiently across multiple platforms and markets with 
       BrainAutoTech's API Bridge.`,
     },
     algoTrading: {
       title:
-        "Best Algo Trading Platform - Automated & Error-Free Trading - BrainAutoTech",
-      description: `Experience the best algo trading with automated, 
+        "Best Algo Platform - Automated & Error-Free working - BrainAutoTech",
+      description: `Experience the best algo software with automated, 
       error-free execution. Save time and money with our platform, 
-      using MetaTrader4 & MetaTrader5 for efficient trading.`,
+      using MetaTrader4 & MetaTrader5 for efficient working.`,
     },
     autoBuyAndSell: {
       title:
-        "Accurate Auto Buy Sell Signal Software for Trading - BrainAutoTech",
-      description: `Get accurate auto buy sell signal software for MCX, NSE, 
-      and more. Easy to install, customizable, and supported by AI for 
-      high-accuracy trading signals.`,
+        "Accurate ALGO Software - BrainAutoTech",
+      description: `Get accurate auto signal Algo software for MCX, NSE, 
+      and more. Easy to use, customizable, and supported by AI for 
+      high-accuracy working.`,
     },
     strategyDevelopment: {
-      title: "Expert Trading Strategy Development & Automation - BrainAutoTech",
-      description: `Develop automated trading strategies on MT4, 
-      MT5, Tradingview, and more. Enjoy expert advisor auto trading, 
-      custom indicators, and secure, stress-free trading.`,
+      title: "Expert Strategy Development & Automation - BrainAutoTech",
+      description: `Develop automated strategies on MT4, 
+      MT5, Tradingview, and more. Enjoy expert advisor auto working, 
+      custom indicators, and secure, stress-free working.`,
     },
   },
   itServices: {
@@ -110,7 +110,7 @@ const metadataProps = {
   },
   about: {
     title:
-      "Brain Auto Tech: Emotionless Auto Trading Terminal  - BrainAutoTech",
+      "Brain Auto Tech: Emotionless Auto working Terminal  - BrainAutoTech",
     description: `Learn about our innovative solutions and commitment to your success. 
     Discover how we can help you achieve your goals with cutting-edge technology.`,
   },

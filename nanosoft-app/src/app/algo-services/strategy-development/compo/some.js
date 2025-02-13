@@ -10,20 +10,20 @@ function SectionCompPara({ text }) {
 const SectionCompParaData = [
   {
     text: `You could know precisely when to purchase, hold or sell stocks or 
-    commodities. Auto Buy Sell signal programming software is an interesting and 
+    commodities. Auto signal programming software is an interesting and 
     extraordinary tool for the brokers, investors and examiners in Financial markets. 
     It has in-fabricated control arrangement of altering with the three targets set for 
     trading dependent on Market conduct consequently with no human intervention.`,
   },
 
   {
-    text: `We are providing 100% exact programmed purchase sell signals software for trading. 
+    text: `We are providing 100% exact programmed purchase signals software for trading. 
     Our product is working in all section in mcx, ncdex, currency, equity,future and so forth all. 
     Our items have been given Complete Artificial Intelligence as respect to setting different parameters 
     for Trading in various contents.`,
   },
   {
-    text: `Moving average is one of the best indicators utilized in auto purchase sell 
+    text: `Moving average is one of the best indicators utilized in auto purchase 
     signal technical analysis chart programming. Moving average is made by processing the 
     normal cost of a share or commodity over a particular number of periods.`,
   },

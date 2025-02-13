@@ -19,7 +19,7 @@ const payment_info = [
     price: 1000,
     time: "Every month",
     features: [
-      "Buy/Sell Signals",
+      "Signals",
       "Updates",
       "Any one of the indicators below",
       "Bat positional indicator",
@@ -33,7 +33,7 @@ const payment_info = [
     price: 6000,
     time: "Every 6 months",
     features: [
-      "Buy/Sell Signals",
+      "Signals",
       "Updates",
       "All 3 indicators below",
       "Bat positional indicator",
@@ -47,7 +47,7 @@ const payment_info = [
     price: 10000,
     time: "Every Year",
     features: [
-      "Buy/Sell Signals",
+      "Signals",
       "Updates",
       "All 4 indicators below",
       "Bat positional indicator",

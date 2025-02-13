@@ -42,8 +42,8 @@ const Herosection = ({ paymentForm, setSelectedStrategy }) => {
         <div className="md:flex justify-between items-center md:px-[15%] gap-0">
           <div className="text text-[7vh] font-[999] md:block hidden">
             <span className="text-[#00c2e0]">
-              NOW TAKE <br />
-              <span className="">TRADES</span> <br />
+              NOW WORK <br />
+              <span className="">FREELY,</span> <br />
               WITHOUT{" "}
             </span>
             <br />
@@ -58,7 +58,7 @@ const Herosection = ({ paymentForm, setSelectedStrategy }) => {
           </div>
 
           <div className="text-center text-[3vh] font-[999] md:hidden">
-            <span className="text-[#00c2e0]">TRADE SMARTER WITH </span>
+            <span className="text-[#00c2e0]">WORK SMARTER WITH </span>
             <br />
             <span className="text-[#00c2e0]">
               <span className="text-black">BRAIN</span>AUTOTECH
@@ -108,8 +108,8 @@ const Herosection = ({ paymentForm, setSelectedStrategy }) => {
         </div>
         <div className="text-center text-[2vh] pt-[20px] leading-snug px-3">
           <span className={poppinsFont2.className}>
-            Maximize your trades in stocks, forex, and crypto with this
-            analytical trading tool.
+            Maximize your working in stocks, forex, and crypto with this
+            analytical working tool.
           </span>
         </div>
       </div>

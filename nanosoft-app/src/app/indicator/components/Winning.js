@@ -13,8 +13,8 @@ function Winning() {
         <p className="text-lg px-[20%]">
           Discover BrainAutoTech, the ultimate online trading service featuring  the most advanced, cutting-edge
           indicators that unveil precise{" "}
-          <span className="text-green-500">BUY</span> and{" "}
-          <span className="text-red-500">SELL</span> signals, catapulting your
+          <span className="text-green-500">solutions</span> and{" "}
+          <span className="text-red-500">Benefits</span> signals, catapulting your
           trading success!
         </p>
         <div className="flex flex-col lg:flex-row justify-center lg:space-x-4 ">

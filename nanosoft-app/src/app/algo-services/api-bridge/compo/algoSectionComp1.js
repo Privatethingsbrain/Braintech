@@ -25,7 +25,7 @@ services, traders can improve their trading, enhance strategies and achieve over
   },
 
   {
-    text: `Contact us if you are looking for cutting-edge API bridge services to achieve your desired trading goals.`,
+    text: `Contact us if you are looking for cutting-edge API bridge services to achieve your desired goals.`,
   },
 ];
 

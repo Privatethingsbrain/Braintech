@@ -142,7 +142,7 @@ function Footer() {
                     <a href="/algo-services/algo-trading/">➠ Algo software</a>
                   </li>
                   <li className="hover:underline">
-                    <a href="/algo-services/auto-buy-and-sell-signal/">➠ Auto Buy & Sell signals</a>
+                    <a href="/algo-services/auto-buy-and-sell-signal/">➠ Signals</a>
                   </li>
                   <li className="hover:underline">
                     <a href="/algo-services/strategy-development/">➠ Strategy Development</a>

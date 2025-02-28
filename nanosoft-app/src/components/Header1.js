@@ -299,7 +299,7 @@ const Header1 = () => {
                 </div>
                 <div className="mt-6 flex items-center gap-2 text-white">
                   <a
-                    href="#"
+                    href="https://login.brainautotech.com/login"
                     target="_blank"
                     className="rounded-md bg-purple-500 px-4 py-2 text-sm font-bold md:text-xl w-full
                  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 active:bg-gray-100 flex justify-center"
@@ -307,7 +307,7 @@ const Header1 = () => {
                     Login
                   </a>
                   <a
-                    href="#"
+                    href="https://login.brainautotech.com/signup"
                     target="_blank"
                     className="rounded-md bg-purple-500 px-4 py-2 text-sm font-bold md:text-xl w-full
                  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 active:bg-gray-100 flex justify-center"
@@ -321,14 +321,14 @@ const Header1 = () => {
         </Transition>
         <div className="hidden lg:flex lg:gap-[20px] text-white">
           <a
-            href="#"
+            href="https://login.brainautotech.com/login"
             target="_blank"
             className="mr-2 text-center pt-1 bg-[#f4511d] duration-300 hover:bg-slate-700 xl:w-[85px] lg:w-[50px] h-[4vh] font-light rounded-xl text-[2vh]"
           >
             Login
           </a>
           <a
-            href="#"
+            href="https://login.brainautotech.com/signup"
             target="_blank"
             className="mr-2 text-center pt-1 bg-[#f4511d] duration-300 hover:bg-slate-700 xl:w-[85px] lg:w-[50px] h-[4vh] font-light rounded-xl text-[2vh]"
           >

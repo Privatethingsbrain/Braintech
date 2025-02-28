@@ -149,10 +149,10 @@ function Header() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
+          <Link href="https://login.brainautotech.com/login">Login</Link>
         </NavbarItem>
         <NavbarItem>
-          <Button as={Link} color="primary" href="#" variant="flat">
+          <Button as={Link} color="primary" href="https://login.brainautotech.com/signup" variant="flat">
             Register
           </Button>
         </NavbarItem>

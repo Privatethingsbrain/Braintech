@@ -5,7 +5,7 @@ const brandCardDetails = [
       "https://live.21lab.co/nanosoft/wp-content/uploads/2018/08/box-w.svg",
     description: "Login",
     bgColor: "#8a49a1",
-    linkTo: "https://brainautotech.com",
+    linkTo: "https://login.brainautotech.com/login",
   },
   {
     imgSrc: "/iws-section/2.jpeg",

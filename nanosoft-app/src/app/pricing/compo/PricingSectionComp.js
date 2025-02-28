@@ -51,7 +51,7 @@ const paymentData = {
   },
   stockOptions: {
     monthly: {
-      price: "10,000",
+      price: "6,000 + GST",
       planData: [
         { text: "2 STRATEGIES" },
         { text: "NO OF Accounts 2" },

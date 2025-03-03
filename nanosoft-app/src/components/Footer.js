@@ -15,9 +15,10 @@ function Footer() {
         )}
       </AnimatePresence>
       <footer className="">
-        <div className="lg:flex lg:justify-between  lg:px-[14vh] lg:items-start lg:space-x-4">
+        <div className="lg:flex lg:justify-between lg:px-[14vh] lg:items-start lg:space-x-4">
+          {/* First column */}
           <div className="flex justify-center">
-            <div className="flex-row  ">
+            <div className="flex-row">
               <a href="/" className="cursor-pointer outline-none border-none">
                 <img src="/braintechlogo.PNG" width={200} />
               </a>
@@ -35,6 +36,7 @@ function Footer() {
                 </span>
               </p>
               <div className="flex justify-start gap-4 items-start pb-8 pl-[10px]">
+                {/* Social media links */}
                 <a
                   href="https://www.facebook.com/brainautotechprivatelimited"
                   target="_blank"
@@ -78,13 +80,15 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div className="flex justify-center gap-[4vh] ">
+
+          {/* Middle columns */}
+          <div className="flex justify-center gap-[4vh]">
+            {/* IT Services */}
             <div className="pl-[5px]">
               <ul className="hover:cursor-pointer">
                 <li className="font-semibold text-[17px] text-[#00c2e0]">
                   ✧ IT services ✧
                 </li>
-
                 <div className="text-[#566a8d] pt-[15px] flex-col font-medium">
                   <a
                     href="/it-services/web-development"
@@ -128,13 +132,14 @@ function Footer() {
                 </div>
               </ul>
             </div>
+
+            {/* Algo Services */}
             <div className="pl-[5px]">
               <ul className="hover:cursor-pointer">
                 <li className="font-semibold text-[17px] text-[#00c2e0]">
                   ✧ Algo Services ✧
                 </li>
-
-                <div className="text-[#566a8d] pt-[15px]  flex-col font-medium">
+                <div className="text-[#566a8d] pt-[15px] flex-col font-medium">
                   <li className="hover:underline">
                     <a href="/algo-services/api-bridge/">➠ Api Bridge</a>
                   </li>
@@ -151,13 +156,15 @@ function Footer() {
               </ul>
             </div>
           </div>
+
+          {/* Contact Info */}
           <div className="flex justify-center pt-[25px] lg:pt-0 lg:m-[-12px] lg:px-0 md:px-[30%] sm:px-[20%] px-[10%]">
-            <div className="">
+            <div>
               <div className="font-bold text-[35px] text-[#00c2e0]">
                 Contact Info:
               </div>
               <div className="font-semibold pt-[20px] text-[#566a8d]">
-                📍 Sai kripa colony, Radisson square, <br />
+                📍 Janjeerbala Sqare, Near Janjeerbala Sqare <br />
                 Indore, Madhya Pradesh, 452010
               </div>
               <div className="text-[#566a8d] pt-[20px]">
@@ -177,7 +184,41 @@ function Footer() {
           </div>
         </div>
 
-        <div className="pt-7 flex justify-center text-gray-400 pb-4 font-extralight hover:underline lg:text-[12px] text-[1.5vh]">
+        {/* TradingView credit line */}
+        <div className="pt-4 flex justify-center items-center text-[#566a8d] pb-2 font-light lg:text-[14px] text-[1.7vh] space-x-2">
+          <svg 
+            viewBox="0 0 24 24" 
+            className="w-4 h-4 fill-current"
+          >
+            <path d="M4.75 19.25h14.5a.75.75 0 0 1 .75.75v.5a.75.75 0 0 1-.75.75H4.75a.75.75 0 0 1-.75-.75V20a.75.75 0 0 1 .75-.75Z"/>
+            <path d="M5 2.75A2.75 2.75 0 0 0 2.25 5.5v10.5a2.75 2.75 0 0 0 2.75 2.75h14a2.75 2.75 0 0 0 2.75-2.75V5.5A2.75 2.75 0 0 0 19 2.75Zm14 1.5a1.25 1.25 0 0 1 1.25 1.25V16a1.25 1.25 0 0 1-1.25 1.25H5A1.25 1.25 0 0 1 3.75 16V5.5A1.25 1.25 0 0 1 5 4.25Z"/>
+          </svg>
+          <span>Charts are powered by</span>
+          <a 
+            href="https://www.tradingview.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-[#00c2e0] hover:text-[#f4511d] transition-all duration-300 font-medium flex items-center group"
+          >
+            TradingView
+            <svg 
+              className="w-4 h-4 ml-1 transform transition-transform duration-300 group-hover:translate-x-1" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M13 7l5 5m0 0l-5 5m5-5H6" 
+              />
+            </svg>
+          </a>
+        </div>
+
+        {/* Copyright */}
+        <div className="pt-2 flex justify-center text-gray-400 pb-4 font-extralight hover:underline lg:text-[12px] text-[1.5vh]">
           Brain Auto Tech &#169;2024. All Rights Reserved
         </div>
       </footer>

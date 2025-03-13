@@ -84,7 +84,7 @@ const stockOptionsData = {
 const paymentData = {
   basic: {
     monthly: {
-      price: "6,000",
+      price: "6,000 + GST",
       planData: [
         { text: "2 STRATEGIES" },
         { text: "NO OF Accounts 2" },
@@ -94,12 +94,12 @@ const paymentData = {
         { text: "1000 Rs.Maintenance Charges For Every Month" },
       ],
     },
-    quarterly: { price: "15,000", planData: null },
-    halfYearly: { price: "25,000", planData: null },
+    quarterly: { price: "15,000 + GST", planData: null },
+    halfYearly: { price: "25,000 + GST", planData: null },
   },
   premium: {
     monthly: {
-      price: "15,000",
+      price: "15,000 + GST",
       planData: [
         { text: "5 STRATEGIES" },
         { text: "NO OF Accounts 4" },
@@ -109,12 +109,12 @@ const paymentData = {
         { text: "1000 Rs.Maintenance Charges For Every Month" },
       ],
     },
-    quarterly: { price: "44,000", planData: null },
-    halfYearly: { price: "77,000", planData: null },
+    quarterly: { price: "44,000 + GST", planData: null },
+    halfYearly: { price: "77,000 + GST", planData: null },
   },
   hni: {
     monthly: {
-      price: "30,000",
+      price: "30,000 + GST",
       planData: [
         { text: "7-8 STRATEGIES" },
         { text: "NO OF Accounts 5" },
@@ -125,8 +125,8 @@ const paymentData = {
         { text: "1000 Rs.Maintenance Charges For Every Month" },
       ],
     },
-    quarterly: { price: "70,000", planData: null },
-    halfYearly: { price: "100,000", planData: null },
+    quarterly: { price: "70,000 + GST", planData: null },
+    halfYearly: { price: "100,000 + GST", planData: null },
   },
   stockOptions: stockOptionsData,
   equityFuture: {

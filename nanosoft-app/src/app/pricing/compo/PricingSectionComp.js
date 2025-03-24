@@ -13,7 +13,7 @@ const stockOptionsData = {
         { text: "3 STOCKS" },
         { text: "FULLY AUTOMATIC" },
         { text: "CALL AND TEXT SUPPORT" },
-        { text: "1000 Rs.Maintenance Charges For Every Month " },
+        // { text: "1000 Rs.Maintenance Charges For Every Month " },
       ],
     },
     quarterly: {
@@ -24,7 +24,7 @@ const stockOptionsData = {
         { text: "3 STOCKS" },
         { text: "FULLY AUTOMATIC" },
         { text: "CALL AND TEXT SUPPORT" },
-        { text: "1000 Rs.Maintenance Charges For Every Month " },
+        // { text: "1000 Rs.Maintenance Charges For Every Month " },
       ],
     },
     halfYearly: {
@@ -36,7 +36,7 @@ const stockOptionsData = {
         { text: "MULTIPLE Categories" },
         { text: "FULLY AUTOMATIC" },
         { text: "CALL AND TEXT SUPPORT" },
-        { text: "1000 Rs.Maintenance Charges For Every Month " },
+        // { text: "1000 Rs.Maintenance Charges For Every Month " },
       ],
     },
   },
@@ -50,7 +50,7 @@ const stockOptionsData = {
         { text: "PREMIUM INDICATORS" },
         { text: "FULLY AUTOMATIC" },
         { text: "24/7 SUPPORT" },
-        { text: "1000 Rs.Maintenance Charges For Every Month " },
+        // { text: "1000 Rs.Maintenance Charges For Every Month " },
       ],
     },
     quarterly: {
@@ -62,7 +62,7 @@ const stockOptionsData = {
         { text: "PREMIUM INDICATORS" },
         { text: "FULLY AUTOMATIC" },
         { text: "24/7 SUPPORT" },
-        { text: "1000 Rs.Maintenance Charges For Every Month " },
+        // { text: "1000 Rs.Maintenance Charges For Every Month " },
       ],
     },
     halfYearly: {
@@ -75,7 +75,7 @@ const stockOptionsData = {
         { text: "MULTIPLE Categories" },
         { text: "FULLY AUTOMATIC" },
         { text: "24/7 PRIORITY SUPPORT" },
-        { text: "1000 Rs.Maintenance Charges For Every Month " },
+        // { text: "1000 Rs.Maintenance Charges For Every Month " },
       ],
     }
   }
@@ -91,7 +91,7 @@ const paymentData = {
         { text: "LIMITED SIGNALS" },
         { text: "FULLY AUTOMATIC" },
         { text: "CALL AND TEXT SUPPORT" },
-        { text: "1000 Rs.Maintenance Charges For Every Month" },
+        // { text: "1000 Rs.Maintenance Charges For Every Month" },
       ],
     },
     quarterly: { price: "15,000 + GST", planData: null },
@@ -106,7 +106,7 @@ const paymentData = {
         { text: "3-10 SIGNALS PER DAY" },
         { text: "FULLY AUTOMATIC" },
         { text: "CALL AND TEXT SUPPORT" },
-        { text: "1000 Rs.Maintenance Charges For Every Month" },
+        // { text: "1000 Rs.Maintenance Charges For Every Month" },
       ],
     },
     quarterly: { price: "44,000 + GST", planData: null },
@@ -122,7 +122,7 @@ const paymentData = {
         { text: "MULTIPLE Categories" },
         { text: "FULLY AUTOMATIC" },
         { text: "CALL AND TEXT SUPPORT" },
-        { text: "1000 Rs.Maintenance Charges For Every Month" },
+        // { text: "1000 Rs.Maintenance Charges For Every Month" },
       ],
     },
     quarterly: { price: "70,000 + GST", planData: null },
@@ -138,7 +138,7 @@ const paymentData = {
         { text: "LIMITED SIGNALS" },
         { text: "FULLY AUTOMATIC" },
         { text: "CALL AND TEXT SUPPORT" },
-        { text: "1000 Rs.Maintenance Charges For Every Month " },
+        // { text: "1000 Rs.Maintenance Charges For Every Month " },
       ],
     },
     quarterly: {
@@ -149,7 +149,7 @@ const paymentData = {
         { text: "3-10 SIGNALS PER DAY" },
         { text: "FULLY AUTOMATIC" },
         { text: "CALL AND TEXT SUPPORT" },
-        { text: "1000 Rs.Maintenance Charges For Every Month " },
+        // { text: "1000 Rs.Maintenance Charges For Every Month " },
       ],
     },
     halfYearly: {
@@ -161,7 +161,82 @@ const paymentData = {
         { text: "MULTIPLE Categories" },
         { text: "FULLY AUTOMATIC" },
         { text: "CALL AND TEXT SUPPORT" },
-        { text: "1000 Rs.Maintenance Charges For Every Month " },
+        // { text: "1000 Rs.Maintenance Charges For Every Month " },
+      ],
+    }
+  },
+  futurePlatform: {
+    monthly: {
+      price: "10,000 + GST",
+      planData: [
+        { text: "2 STRATEGIES" },
+        { text: "NO OF Accounts 2" },
+        { text: "LIMITED SIGNALS" },
+        { text: "FULLY AUTOMATIC" },
+        { text: "CALL AND TEXT SUPPORT" },
+      ],
+    },
+    quarterly: {
+      price: "25,000 + GST",
+      planData: [
+        { text: "5 STRATEGIES" },
+        { text: "NO OF Accounts 4" },
+        { text: "3-10 SIGNALS PER DAY" },
+        { text: "FULLY AUTOMATIC" },
+        { text: "CALL AND TEXT SUPPORT" },
+      ],
+    },
+    halfYearly: {
+      price: "45,000 + GST",
+      planData: [
+        { text: "7-8 STRATEGIES" },
+        { text: "NO OF Accounts 5" },
+        { text: "4-10 SIGNALS PER DAY" },
+        { text: "MULTIPLE Categories" },
+        { text: "FULLY AUTOMATIC" },
+        { text: "CALL AND TEXT SUPPORT" },
+      ],
+    }
+  },
+  indexOptionPremium: {
+    monthly: {
+      price: "11,000 + GST",
+      planData: [
+        { text: "2 STRATEGIES" },
+        { text: "NO OF Accounts 4" },
+        { text: "NIFTY OPTIONS" },
+        { text: "BANKNIFTY OPTIONS" },
+        { text: "FINNIFTY OPTIONS" },
+        { text: "PREMIUM INDICATORS" },
+        { text: "FULLY AUTOMATIC" },
+        { text: "24/7 PRIORITY SUPPORT" },
+      ],
+    },
+    quarterly: {
+      price: "30,000 + GST",
+      planData: [
+        { text: "2 STRATEGIES" },
+        { text: "NO OF Accounts 6" },
+        { text: "NIFTY OPTIONS" },
+        { text: "BANKNIFTY OPTIONS" },
+        { text: "FINNIFTY OPTIONS" },
+        { text: "PREMIUM INDICATORS" },
+        { text: "FULLY AUTOMATIC" },
+        { text: "24/7 PRIORITY SUPPORT" },
+      ],
+    },
+    halfYearly: {
+      price: "50,000 + GST",
+      planData: [
+        { text: "2 STRATEGIES" },
+        { text: "NO OF Accounts 8" },
+        { text: "NIFTY OPTIONS" },
+        { text: "BANKNIFTY OPTIONS" },
+        { text: "FINNIFTY OPTIONS" },
+        { text: "PREMIUM INDICATORS" },
+        { text: "MULTIPLE Categories" },
+        { text: "FULLY AUTOMATIC" },
+        { text: "24/7 PRIORITY SUPPORT" },
       ],
     }
   }
@@ -181,47 +256,84 @@ const PricingSectionComp = () => {
   return (
     <>
       <div className="pt-[30px] pb-[30px] px-4">
-        <div className="flex flex-col md:flex-row mx-auto xl:w-[55%] md:w-[75%] md:px-7 justify-between rounded-xl space-y-7 md:space-y-0 md:space-x-7 items-center shadow-md py-3 px-5 border-gray-700">
-          <button
-            className={`block text-lg ${
-              selectPricing === "basic" ? "text-red-500" : "text-black"
-            } font-bold`}
-            onClick={() => setSelectPricing("basic")}
-          >
-            BASIC PLATFORM
-          </button>
-          <button
-            className={`block text-lg ${
-              selectPricing === "premium" ? "text-red-500" : "text-black"
-            } font-bold`}
-            onClick={() => setSelectPricing("premium")}
-          >
-            PREMIUM PLATFORM
-          </button>
-          <button
-            className={`block text-lg ${
-              selectPricing === "hni" ? "text-red-500" : "text-black"
-            } font-bold`}
-            onClick={() => setSelectPricing("hni")}
-          >
-            HNI PLATFORM
-          </button>
-          <button
-            className={`block text-lg ${
-              selectPricing === "stockOptions" ? "text-red-500" : "text-black"
-            } font-bold`}
-            onClick={() => setSelectPricing("stockOptions")}
-          >
-            STOCK OPTIONS
-          </button>
-          <button
-            className={`block text-lg ${
-              selectPricing === "equityFuture" ? "text-red-500" : "text-black"
-            } font-bold`}
-            onClick={() => setSelectPricing("equityFuture")}
-          >
-            {`EQUITY & FUTURE`}
-          </button>
+        <div className="mx-auto xl:w-[90%] md:w-[95%]">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 mb-4">
+            <button
+              className={`py-3 px-4 rounded-lg transition-all ${
+                selectPricing === "basic" 
+                  ? "bg-red-500 text-white shadow-lg scale-105" 
+                  : "bg-gray-100 text-black hover:bg-gray-200"
+              } font-bold text-sm sm:text-base`}
+              onClick={() => setSelectPricing("basic")}
+            >
+              BASIC PLATFORM
+            </button>
+            <button
+              className={`py-3 px-4 rounded-lg transition-all ${
+                selectPricing === "premium"
+                  ? "bg-red-500 text-white shadow-lg scale-105"
+                  : "bg-gray-100 text-black hover:bg-gray-200"
+              } font-bold text-sm sm:text-base`}
+              onClick={() => setSelectPricing("premium")}
+            >
+              PREMIUM PLATFORM
+            </button>
+            <button
+              className={`py-3 px-4 rounded-lg transition-all ${
+                selectPricing === "hni"
+                  ? "bg-red-500 text-white shadow-lg scale-105"
+                  : "bg-gray-100 text-black hover:bg-gray-200"
+              } font-bold text-sm sm:text-base`}
+              onClick={() => setSelectPricing("hni")}
+            >
+              HNI PLATFORM
+            </button>
+            <button
+              className={`py-3 px-4 rounded-lg transition-all relative ${
+                selectPricing === "stockOptions"
+                  ? "bg-red-500 text-white shadow-lg scale-105"
+                  : "bg-gray-100 text-black hover:bg-gray-200"
+              } font-bold text-sm sm:text-base`}
+              onClick={() => setSelectPricing("stockOptions")}
+            >
+              STOCK OPTIONS
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">New</span>
+            </button>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <button
+              className={`py-3 px-4 rounded-lg transition-all ${
+                selectPricing === "equityFuture"
+                  ? "bg-red-500 text-white shadow-lg scale-105"
+                  : "bg-gray-100 text-black hover:bg-gray-200"
+              } font-bold text-sm sm:text-base`}
+              onClick={() => setSelectPricing("equityFuture")}
+            >
+              EQUITY PLATFORM
+            </button>
+            <button
+              className={`py-3 px-4 rounded-lg transition-all ${
+                selectPricing === "futurePlatform"
+                  ? "bg-red-500 text-white shadow-lg scale-105"
+                  : "bg-gray-100 text-black hover:bg-gray-200"
+              } font-bold text-sm sm:text-base`}
+              onClick={() => setSelectPricing("futurePlatform")}
+            >
+              FUTURE PLATFORM
+            </button>
+            <button
+              className={`py-3 px-4 rounded-lg transition-all relative ${
+                selectPricing === "indexOptionPremium"
+                  ? "bg-red-500 text-white shadow-lg scale-105"
+                  : "bg-gray-100 text-black hover:bg-gray-200"
+              } font-bold text-sm sm:text-base`}
+              onClick={() => setSelectPricing("indexOptionPremium")}
+            >
+              INDEX OPTION PREMIUM
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">New</span>
+            </button>
+          </div>
         </div>
 
         {selectPricing === "stockOptions" && (

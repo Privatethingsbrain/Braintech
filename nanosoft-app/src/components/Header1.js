@@ -100,9 +100,9 @@ const Header1 = () => {
             <a href="/pricing" className="textdesign cursor-pointer">
               Pricing
             </a>
-            <a href="/indicator" className="textdesign cursor-pointer">
+            {/* <a href="/indicator" className="textdesign cursor-pointer">
               Indicator
-            </a>
+            </a> */}
             <a href="/payment" className="textdesign hover:cursor-pointer">
               Payment
             </a>
@@ -250,12 +250,12 @@ const Header1 = () => {
                       href="/indicator"
                       className="focus:outline-none focus:ring-2 !text-[#102b5c] focus:ring-inset focus:ring-gray-500 px-2"
                     >
-                      Indicator
+                      {/* Indicator
                     </a>
                     <a
                       href="/pricing"
                       className="focus:outline-none focus:ring-2 !text-[#102b5c] focus:ring-inset focus:ring-gray-500 px-2"
-                    >
+                    > */}
                       Pricing
                     </a>
                     <a

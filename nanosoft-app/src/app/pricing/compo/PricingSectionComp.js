@@ -167,7 +167,7 @@ const paymentData = {
   },
   futurePlatform: {
     monthly: {
-      price: "10,000 + GST",
+      price: "15,000 + GST",
       planData: [
         { text: "2 STRATEGIES" },
         { text: "NO OF Accounts 2" },
@@ -177,7 +177,7 @@ const paymentData = {
       ],
     },
     quarterly: {
-      price: "25,000 + GST",
+      price: "44,000 + GST",
       planData: [
         { text: "5 STRATEGIES" },
         { text: "NO OF Accounts 4" },
@@ -187,7 +187,7 @@ const paymentData = {
       ],
     },
     halfYearly: {
-      price: "45,000 + GST",
+      price: "77,000 + GST",
       planData: [
         { text: "7-8 STRATEGIES" },
         { text: "NO OF Accounts 5" },

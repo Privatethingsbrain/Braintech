@@ -84,7 +84,7 @@ const stockOptionsData = {
 const paymentData = {
   basic: {
     monthly: {
-      price: "6,000 + GST",
+      price: "7,000 + GST",
       planData: [
         { text: "2 STRATEGIES" },
         { text: "NO OF Accounts 2" },
@@ -94,12 +94,12 @@ const paymentData = {
         // { text: "1000 Rs.Maintenance Charges For Every Month" },
       ],
     },
-    quarterly: { price: "15,000 + GST", planData: null },
-    halfYearly: { price: "25,000 + GST", planData: null },
+    quarterly: { price: "17,000 + GST", planData: null },
+    halfYearly: { price: "30,000 + GST", planData: null },
   },
   premium: {
     monthly: {
-      price: "15,000 + GST",
+      price: "17,000 + GST",
       planData: [
         { text: "5 STRATEGIES" },
         { text: "NO OF Accounts 4" },
@@ -109,12 +109,12 @@ const paymentData = {
         // { text: "1000 Rs.Maintenance Charges For Every Month" },
       ],
     },
-    quarterly: { price: "44,000 + GST", planData: null },
-    halfYearly: { price: "77,000 + GST", planData: null },
+    quarterly: { price: "50,000 + GST", planData: null },
+    halfYearly: { price: "90,000 + GST", planData: null },
   },
   hni: {
     monthly: {
-      price: "30,000 + GST",
+      price: "34,000 + GST",
       planData: [
         { text: "7-8 STRATEGIES" },
         { text: "NO OF Accounts 5" },
@@ -125,13 +125,13 @@ const paymentData = {
         // { text: "1000 Rs.Maintenance Charges For Every Month" },
       ],
     },
-    quarterly: { price: "70,000 + GST", planData: null },
-    halfYearly: { price: "100,000 + GST", planData: null },
+    quarterly: { price: "80,000 + GST", planData: null },
+    halfYearly: { price: "110,000 + GST", planData: null },
   },
   stockOptions: stockOptionsData,
   equityFuture: {
     monthly: {
-      price: "6,000 + GST",
+      price: "7,000 + GST",
       planData: [
         { text: "2 STRATEGIES" },
         { text: "NO OF Accounts 2" },
@@ -142,7 +142,7 @@ const paymentData = {
       ],
     },
     quarterly: {
-      price: "15,000 + GST",
+      price: "17,000 + GST",
       planData: [
         { text: "5 STRATEGIES" },
         { text: "NO OF Accounts 4" },
@@ -153,7 +153,7 @@ const paymentData = {
       ],
     },
     halfYearly: {
-      price: "25,000 + GST",
+      price: "30,000 + GST",
       planData: [
         { text: "7-8 STRATEGIES" },
         { text: "NO OF Accounts 5" },
@@ -200,7 +200,7 @@ const paymentData = {
   },
   indexOptionPremium: {
     monthly: {
-      price: "11,000 + GST",
+      price: "12,000 + GST",
       planData: [
         { text: "2 STRATEGIES" },
         { text: "NO OF Accounts 4" },
@@ -226,7 +226,7 @@ const paymentData = {
       ],
     },
     halfYearly: {
-      price: "50,000 + GST",
+      price: "53,000 + GST",
       planData: [
         { text: "2 STRATEGIES" },
         { text: "NO OF Accounts 8" },

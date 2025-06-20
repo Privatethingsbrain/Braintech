@@ -49,7 +49,7 @@ function AppFormComp() {
                   <FontAwesomeIcon icon={faMapMarkerAlt} />{" "}
                 </span>
                 <a href="/contact/#mapcont">
-                  : Sai kripa colony, Radisson square, Indore,<br></br> Madhya
+                  : Diamond Colony, Janjeerbala Square, Indore,<br></br> Madhya
                   Pradesh 452010
                 </a>
               </li>

@@ -63,7 +63,7 @@ const Page = () => {
                   <FontAwesomeIcon icon={faMapMarkerAlt} />{" "}
                 </span>
                 <a href="#map">
-                  : Sai kripa colony, Radisson square, Indore,<br></br> Madhya
+                  :  Diamond Colony, Janjeerbala Square,<br></br> Madhya
                   Pradesh 452010
                 </a>
               </li>

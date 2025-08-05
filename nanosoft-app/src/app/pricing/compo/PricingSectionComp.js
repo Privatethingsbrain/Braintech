@@ -128,70 +128,68 @@ const paymentData = {
   stockOptions: stockOptionsData,
   equityFuture: {
     monthly: {
-      price: "7000",
+      price: "30,000 + 18% GST",
       planData: [
-        { text: "2 STRATEGIES" },
-        { text: "NO OF Accounts 2" },
-        { text: "LIMITED SIGNALS" },
-        { text: "FULLY AUTOMATIC" },
-        { text: "CALL AND TEXT SUPPORT" },
+        { text: "Coverage: Gold & Silver" },
+        { text: "3 Pre-built Strategies" },
+        { text: "4 Broker Account Connections" },
+        { text: "SMA Access (Strategy Management Area)" },
+        { text: "Dedicated Call Support" },
         // { text: "1000 Rs.Maintenance Charges For Every Month " },
       ],
     },
     quarterly: {
-      price: "17,000",
+      price: "75,000 + 18% GST",
       planData: [
-        { text: "5 STRATEGIES" },
-        { text: "NO OF Accounts 4" },
-        { text: "3-10 SIGNALS PER DAY" },
-        { text: "FULLY AUTOMATIC" },
-        { text: "CALL AND TEXT SUPPORT" },
+        { text: "Coverage: Gold & Silver" },
+        { text: "3 Pre-built Strategies" },
+        { text: "4 Broker Account Connections" },
+        { text: "SMA Access (Strategy Management Area)" },
+        { text: "Dedicated Call Support" },
         // { text: "1000 Rs.Maintenance Charges For Every Month " },
       ],
     },
     halfYearly: {
-      price: "30,000",
+      price: "1,20,000 + 18% GST",
       planData: [
-        { text: "7-8 STRATEGIES" },
-        { text: "NO OF Accounts 5" },
-        { text: "4-10 SIGNALS PER DAY" },
-        { text: "MULTIPLE Categories" },
-        { text: "FULLY AUTOMATIC" },
-        { text: "CALL AND TEXT SUPPORT" },
+        { text: "Coverage: Gold & Silver" },
+        { text: "3 Pre-built Strategies" },
+        { text: "4 Broker Account Connections" },
+        { text: "SMA Access (Strategy Management Area)" },
+        { text: "Dedicated Call Support" },
         // { text: "1000 Rs.Maintenance Charges For Every Month " },
       ],
     }
   },
   futurePlatform: {
     monthly: {
-            price: "15,000",
+            price: "15,000 + 18% GST",
       planData: [
-        { text: "2 STRATEGIES" },
-        { text: "NO OF Accounts 2" },
-        { text: "LIMITED SIGNALS" },
-        { text: "FULLY AUTOMATIC" },
-        { text: "CALL AND TEXT SUPPORT" },
+        { text: "Coverage: Crude Oil, Natural Gas, Copper" },
+        { text: "3 Pre-built Strategies" },
+        { text: "4 Broker Account Connections" },
+        { text: "SMA Access (Strategy Management Area)" },
+        { text: "Dedicated Call Support" },
       ],
     },
     quarterly: {
-      price: "44,000",
+      price: "40,000 + 18% GST",
       planData: [
-        { text: "5 STRATEGIES" },
-        { text: "NO OF Accounts 4" },
-        { text: "3-10 SIGNALS PER DAY" },
-        { text: "FULLY AUTOMATIC" },
-        { text: "CALL AND TEXT SUPPORT" },
+        { text: "Coverage: Crude Oil, Natural Gas, Copper" },
+        { text: "3 Pre-built Strategies" },
+        { text: "4 Broker Account Connections" },
+        { text: "SMA Access (Strategy Management Area)" },
+        { text: "Dedicated Call Support" },
       ],
     },
     halfYearly: {
-      price: "77,000",
+      price: "70,000 + 18% GST",
       planData: [
-        { text: "7-8 STRATEGIES" },
-        { text: "NO OF Accounts 5" },
-        { text: "4-10 SIGNALS PER DAY" },
-        { text: "MULTIPLE Categories" },
-        { text: "FULLY AUTOMATIC" },
-        { text: "CALL AND TEXT SUPPORT" },
+        { text: "Coverage: Crude Oil, Natural Gas, Copper" },
+        { text: "3 Pre-built Strategies" },
+        { text: "4 Broker Account Connections" },
+        { text: "SMA Access (Strategy Management Area)" },
+        { text: "Dedicated Call Support" },
       ],
     }
   },
@@ -304,7 +302,7 @@ const PricingSectionComp = () => {
               } font-bold text-sm sm:text-base`}
               onClick={() => setSelectPricing("equityFuture")}
             >
-              EQUITY PLATFORM
+              MCX Bullion Plan (Gold & Silver)
             </button>
             <button
               className={`py-3 px-4 rounded-lg transition-all ${
@@ -314,7 +312,7 @@ const PricingSectionComp = () => {
               } font-bold text-sm sm:text-base`}
               onClick={() => setSelectPricing("futurePlatform")}
             >
-              FUTURE PLATFORM
+              MCX Energy/Metal Plan (Crude, NG & Copper)
             </button>
             <button
               className={`py-3 px-4 rounded-lg transition-all relative ${
